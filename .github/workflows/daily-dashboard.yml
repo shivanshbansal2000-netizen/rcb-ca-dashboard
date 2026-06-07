@@ -1,0 +1,29 @@
+name: Daily CA Dashboard
+
+on:
+  schedule:
+    - cron: "30 3 * * *"  # 9:00 AM IST daily
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install requests
+
+      - name: Generate dashboard
+        run: python ca_monitor.py
+
+      - name: Commit and push dashboard
+        run: |
+          git config user.name "MARVIN"
+          git config user.email "actions@github.com"
+          git add index.html
+          git diff --cached --quiet || git commit -m "dashboard: $(date +'%d %b %Y %H:%M IST')"
+          git push

@@ -5,7 +5,7 @@ Called by ca_monitor.py after each fetch. Output: ca_dashboard.html
 from pathlib import Path
 from datetime import datetime
 
-OUT = Path(__file__).parent / "ca_dashboard.html"
+OUT = Path(__file__).parent / "index.html"
 
 
 def generate(matches, total_isins, last_updated):
