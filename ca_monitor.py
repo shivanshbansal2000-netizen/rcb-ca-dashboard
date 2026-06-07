@@ -42,7 +42,7 @@ def load_isins():
     # In CI: read from environment variable (GitHub Secret)
     env_isins = os.environ.get("RCB_ISINS")
     if env_isins:
-        return json.loads(env_isins)
+        return json.loads(env_isins.lstrip("﻿"))
     # Local: read from file
     if not ISIN_FILE.exists():
         print("ERROR: rcb_isins.json not found and RCB_ISINS env var not set.")
