@@ -1,0 +1,58 @@
+name: Test NSE API
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-nse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install requests
+
+      - name: Test NSE equity master
+        run: |
+          python - <<'EOF'
+          import requests, time
+
+          s = requests.Session()
+          s.headers.update({
+              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36",
+              "Accept": "application/json, text/plain, */*",
+              "Accept-Language": "en-US,en;q=0.9",
+              "Referer": "https://www.nseindia.com/",
+          })
+
+          # Prime the session
+          print("Priming NSE session...")
+          r = s.get("https://www.nseindia.com", timeout=15)
+          print(f"  NSE homepage: {r.status_code}")
+          time.sleep(2)
+
+          # Test equity master
+          print("Fetching equity master...")
+          r = s.get("https://archives.nseindia.com/content/equities/EQUITY_L.csv", timeout=20)
+          print(f"  Equity master: {r.status_code} — {len(r.text.splitlines())} rows")
+
+          # Test CA API
+          print("Fetching corporate actions (30-day window)...")
+          from datetime import datetime, timedelta
+          today = datetime.today()
+          from_str = (today - timedelta(days=14)).strftime("%d-%m-%Y")
+          to_str   = (today + timedelta(days=30)).strftime("%d-%m-%Y")
+          url = f"https://www.nseindia.com/api/corporates-corporateActions?index=equities&from_date={from_str}&to_date={to_str}"
+          r = s.get(url, timeout=20)
+          print(f"  CA API: {r.status_code}")
+          data = r.json()
+          count = len(data) if isinstance(data, list) else len(data.get("data", []))
+          print(f"  Records returned: {count}")
+          if count > 0:
+              print("  PASS - NSE API works from GitHub Actions")
+          else:
+              print("  WARNING - 0 records returned (may be blocked)")
+          EOF
