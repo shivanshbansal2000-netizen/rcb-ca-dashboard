@@ -19,6 +19,8 @@ jobs:
 
       - name: Generate dashboard
         run: python ca_monitor.py
+        env:
+          RCB_ISINS: ${{ secrets.RCB_ISINS }}
 
       - name: Commit and push dashboard
         run: |

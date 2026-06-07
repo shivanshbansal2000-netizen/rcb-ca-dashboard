@@ -5,7 +5,7 @@ filters for our ISINs, and sends an email digest.
 
 Run: python ca_monitor.py
 """
-import json, sys, time
+import json, sys, time, os
 from pathlib import Path
 from datetime import datetime, timedelta
 import requests
@@ -39,8 +39,13 @@ LOOKBACK_DAYS = 14  # also surface recently missed past actions
 
 # ── Load ISINs ──
 def load_isins():
+    # In CI: read from environment variable (GitHub Secret)
+    env_isins = os.environ.get("RCB_ISINS")
+    if env_isins:
+        return json.loads(env_isins)
+    # Local: read from file
     if not ISIN_FILE.exists():
-        print("ERROR: rcb_isins.json not found. Run extract_isins.py first.")
+        print("ERROR: rcb_isins.json not found and RCB_ISINS env var not set.")
         sys.exit(1)
     return json.loads(ISIN_FILE.read_text())
 
