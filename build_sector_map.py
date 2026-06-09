@@ -1,20 +1,31 @@
 """
-One-time script to build ISIN -> sector mapping for RCB holdings.
-Reads ISINs from rcb_isins.json (or RCB_ISINS env var).
-Queries NSE quote API for each symbol's industry classification.
-Outputs sector_map.json -- commit to repo after running, refresh quarterly.
+Builds ISIN -> sector mapping for RCB holdings using NSE index constituent CSVs.
+Each CSV already includes Industry column -- no per-stock API calls needed.
+Runs in ~10 seconds. Outputs sector_map.json -- commit to repo, refresh quarterly.
 
 Usage:
   python build_sector_map.py
-  python build_sector_map.py --reset   # start fresh, ignore existing cache
 """
-import json, time, os, sys
+import json, os, sys
 from pathlib import Path
 import requests
 
-HERE       = Path(__file__).parent
-ISIN_FILE  = HERE / "rcb_isins.json"
-OUT_FILE   = HERE / "sector_map.json"
+HERE      = Path(__file__).parent
+ISIN_FILE = HERE / "rcb_isins.json"
+OUT_FILE  = HERE / "sector_map.json"
+
+# NSE publishes index constituent CSVs with Company Name, Industry, Symbol, ISIN
+# Ordered broadest-first so wider coverage files take priority
+INDEX_CSVS = [
+    "https://archives.nseindia.com/content/indices/ind_niftytotalmarket_list.csv",
+    "https://archives.nseindia.com/content/indices/ind_nifty500list.csv",
+    "https://archives.nseindia.com/content/indices/ind_niftylargemidcap250_list.csv",
+    "https://archives.nseindia.com/content/indices/ind_niftymidcap150_list.csv",
+    "https://archives.nseindia.com/content/indices/ind_niftysmallcap250_list.csv",
+    "https://archives.nseindia.com/content/indices/ind_niftymicrocap250_list.csv",
+]
+
+HEADERS = {"User-Agent": "Mozilla/5.0"}
 
 
 def load_isins():
@@ -27,106 +38,77 @@ def load_isins():
     return json.loads(ISIN_FILE.read_text())
 
 
-def nse_session():
-    s = requests.Session()
-    s.headers.update({
-        "User-Agent":      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124.0 Safari/537.36",
-        "Accept":          "application/json, text/plain, */*",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Referer":         "https://www.nseindia.com/",
-    })
+def fetch_index_csv(url):
+    """Download one index CSV and return {isin: {company, sector, symbol}}."""
     try:
-        s.get("https://www.nseindia.com", timeout=15)
-        time.sleep(2)
+        r = requests.get(url, timeout=20, headers=HEADERS)
+        r.raise_for_status()
+        entries = {}
+        for line in r.text.splitlines()[1:]:
+            parts = [p.strip().strip('"') for p in line.split(",")]
+            if len(parts) < 5:
+                continue
+            # CSV columns: Company Name, Industry, Symbol, Series, ISIN Code
+            company = parts[0]
+            sector  = parts[1]
+            symbol  = parts[2]
+            isin    = parts[4]
+            if isin and sector:
+                entries[isin] = {"company": company, "sector": sector, "symbol": symbol}
+        label = url.split("/")[-1]
+        print(f"  {label}: {len(entries)} entries")
+        return entries
     except Exception as e:
-        print(f"  Warning: NSE session prime failed -- {e}")
-    return s
+        print(f"  WARN: {url.split('/')[-1]} failed -- {e}")
+        return {}
 
 
-def get_nse_master():
-    url = "https://archives.nseindia.com/content/equities/EQUITY_L.csv"
-    print("  Downloading NSE equity master...")
-    r = requests.get(url, timeout=20, headers={"User-Agent": "Mozilla/5.0"})
-    r.raise_for_status()
-    isin_map = {}
-    for line in r.text.splitlines()[1:]:
-        parts = line.split(",")
-        if len(parts) >= 7:
-            symbol = parts[0].strip().strip('"')
-            name   = parts[1].strip().strip('"')
-            isin   = parts[6].strip().strip('"')
-            if isin:
-                isin_map[isin] = {"symbol": symbol, "name": name}
-    print(f"  NSE master loaded -- {len(isin_map)} entries")
-    return isin_map
-
-
-def get_sector(session, symbol):
-    url = f"https://www.nseindia.com/api/quote-equity?symbol={symbol}"
-    try:
-        r = session.get(url, timeout=10)
-        if r.status_code != 200:
-            return None
-        data = r.json()
-        return (
-            data.get("metadata", {}).get("industry")
-            or data.get("industryInfo", {}).get("basicIndustry")
-        )
-    except Exception:
-        return None
+def build_master_map():
+    """Merge all index CSVs into one ISIN -> sector map."""
+    master = {}
+    for url in INDEX_CSVS:
+        entries = fetch_index_csv(url)
+        for isin, data in entries.items():
+            if isin not in master:  # first match wins (broadest index first)
+                master[isin] = data
+    return master
 
 
 def main():
-    reset = "--reset" in sys.argv
-    print("Building sector map for RCB holdings...")
-    our_isins = load_isins()
-    print(f"Loaded {len(our_isins)} ISINs")
+    print("Building sector map from NSE index CSVs...")
+    our_isins  = load_isins()
+    print(f"Loaded {len(our_isins)} RCB ISINs\n")
 
-    existing = {}
-    if OUT_FILE.exists() and not reset:
-        existing = json.loads(OUT_FILE.read_text())
-        print(f"Resuming -- {len(existing)} entries already cached")
+    print("Downloading NSE index files:")
+    master = build_master_map()
+    print(f"\nTotal unique ISINs across all indices: {len(master)}")
 
-    nse_master = get_nse_master()
-    session    = nse_session()
-
-    result = dict(existing)
-    todo   = [isin for isin in our_isins if isin not in result]
-    print(f"Need to fetch sector for {len(todo)} ISINs\n")
-
-    for i, isin in enumerate(todo):
-        company_name = our_isins.get(isin, "Unknown")
-        if isin not in nse_master:
+    # Match our holdings against the master
+    result = {}
+    matched = 0
+    for isin, company_name in our_isins.items():
+        if isin in master:
+            result[isin] = master[isin]
+            matched += 1
+        else:
             result[isin] = {"company": company_name, "sector": "Other", "symbol": ""}
-            continue
 
-        entry  = nse_master[isin]
-        symbol = entry["symbol"]
-        sector = get_sector(session, symbol)
-        result[isin] = {
-            "company": entry["name"] or company_name,
-            "sector":  sector or "Other",
-            "symbol":  symbol,
-        }
-        print(f"  [{i+1}/{len(todo)}] {symbol}: {sector or 'unknown'}")
-        time.sleep(1.5)
-
-        if (i + 1) % 50 == 0:
-            OUT_FILE.write_text(json.dumps(result, indent=2))
-            print(f"  Progress saved ({len(result)} entries)")
+    print(f"Matched: {matched}/{len(our_isins)} ISINs  |  Unmatched (sector=Other): {len(our_isins)-matched}")
 
     OUT_FILE.write_text(json.dumps(result, indent=2))
 
+    # Sector breakdown
     sectors = {}
     for v in result.values():
         s = v.get("sector", "Other")
         sectors[s] = sectors.get(s, 0) + 1
 
-    print(f"\nTop sectors in portfolio:")
-    for s, c in sorted(sectors.items(), key=lambda x: -x[1])[:15]:
-        print(f"  {c:3d}  {s}")
+    print(f"\nSector breakdown ({len(sectors)} sectors):")
+    for s, c in sorted(sectors.items(), key=lambda x: -x[1]):
+        bar = "█" * (c // 3)
+        print(f"  {c:3d}  {s:40s} {bar}")
+
     print(f"\nSaved {len(result)} entries to {OUT_FILE}")
-    print("Next step: git add sector_map.json && git commit -m 'data: sector map'")
 
 
 if __name__ == "__main__":
