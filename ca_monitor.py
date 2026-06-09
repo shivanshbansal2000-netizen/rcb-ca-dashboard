@@ -1,7 +1,7 @@
 """
 Daily CA monitor for RCB family holdings.
 Fetches upcoming corporate actions from NSE for the next 30 days,
-filters for our ISINs, and sends an email digest.
+filters for our ISINs, and writes index.html dashboard.
 
 Run: python ca_monitor.py
 """
@@ -16,9 +16,6 @@ from generate_dashboard import generate as generate_dashboard
 HERE       = Path(__file__).parent
 ISIN_FILE  = HERE / "rcb_isins.json"
 STATE_FILE = HERE / "state.json"
-GMAIL_TOOL = r"C:\Users\mlbca\Desktop\marvin\tools\gmail_sender\send.py"
-FROM_EMAIL = "info@nextgenregistry.com"
-TO_EMAIL   = "info@nextgenregistry.com"
 WINDOW_DAYS = 30
 
 CA_TYPES_WATCH = {
@@ -54,7 +51,7 @@ def load_isins():
 def load_state():
     if STATE_FILE.exists():
         return json.loads(STATE_FILE.read_text())
-    return {"last_run": None, "alerted": []}
+    return {"last_run": None}
 
 def save_state(state):
     STATE_FILE.write_text(json.dumps(state, indent=2))
@@ -224,105 +221,6 @@ def filter_ca(ca_list, our_isins, isin_symbol_map):
 
     matches.sort(key=lambda x: x["days_left"])
     return matches
-
-
-# ── Build HTML email ──
-def build_html(matches, today):
-    urgent  = [m for m in matches if m["urgent"]]
-    upcoming = [m for m in matches if not m["urgent"]]
-
-    def rows(items, bg_urgent=False):
-        out = ""
-        for i, m in enumerate(items):
-            bg = "#FFF3CD" if m["urgent"] else ("#F9F9F9" if i % 2 else "#FFFFFF")
-            badge_color = "#DC3545" if m["urgent"] else "#0D6EFD"
-            badge = f'<span style="background:{badge_color};color:white;padding:2px 8px;border-radius:10px;font-size:11px;">{m["ca_type"]}</span>'
-            out += f"""
-            <tr style="background:{bg}">
-              <td style="padding:8px;border:1px solid #ddd;font-size:12px;">{i+1}</td>
-              <td style="padding:8px;border:1px solid #ddd;font-size:12px;font-weight:bold;">{m['name']}</td>
-              <td style="padding:8px;border:1px solid #ddd;font-size:12px;">{m['isin']}</td>
-              <td style="padding:8px;border:1px solid #ddd;font-size:12px;">{badge}</td>
-              <td style="padding:8px;border:1px solid #ddd;font-size:12px;">{m['key_date']}</td>
-              <td style="padding:8px;border:1px solid #ddd;font-size:12px;{'color:#DC3545;font-weight:bold' if m['urgent'] else ''}">{m['days_left']} days</td>
-              <td style="padding:8px;border:1px solid #ddd;font-size:12px;color:#555;">{m['subject'][:80]}</td>
-            </tr>"""
-        return out
-
-    table_hdr = """
-    <table style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;">
-      <thead>
-        <tr style="background:#1F3864;color:white;">
-          <th style="padding:10px;border:1px solid #ddd;text-align:left;">#</th>
-          <th style="padding:10px;border:1px solid #ddd;text-align:left;">Stock</th>
-          <th style="padding:10px;border:1px solid #ddd;text-align:left;">ISIN</th>
-          <th style="padding:10px;border:1px solid #ddd;text-align:left;">Action</th>
-          <th style="padding:10px;border:1px solid #ddd;text-align:left;">Key Date</th>
-          <th style="padding:10px;border:1px solid #ddd;text-align:left;">Days Left</th>
-          <th style="padding:10px;border:1px solid #ddd;text-align:left;">Details</th>
-        </tr>
-      </thead>
-      <tbody>"""
-
-    urgent_section = ""
-    if urgent:
-        urgent_section = f"""
-        <h3 style="color:#DC3545;margin-top:24px;">
-          URGENT - Act within {URGENT_DAYS} days ({len(urgent)} action{'s' if len(urgent)>1 else ''})
-        </h3>
-        {table_hdr}{rows(urgent)}</tbody></table>"""
-
-    upcoming_section = ""
-    if upcoming:
-        upcoming_section = f"""
-        <h3 style="color:#1F3864;margin-top:24px;">
-          Upcoming - Next 30 Days ({len(upcoming)} action{'s' if len(upcoming)>1 else ''})
-        </h3>
-        {table_hdr}{rows(upcoming)}</tbody></table>"""
-
-    no_action = ""
-    if not matches:
-        no_action = """
-        <div style="padding:20px;background:#E8F5E9;border-radius:6px;color:#2E7D32;font-family:Arial;">
-          No corporate actions due in the next 30 days for RCB holdings.
-        </div>"""
-
-    html = f"""
-    <html><body style="font-family:Arial,sans-serif;max-width:1000px;margin:0 auto;padding:20px;">
-      <div style="background:#1F3864;color:white;padding:16px 20px;border-radius:6px 6px 0 0;">
-        <h2 style="margin:0;">MARVIN — Corporate Action Alert</h2>
-        <p style="margin:4px 0 0;font-size:13px;">RCB Family Holdings &nbsp;|&nbsp; {today.strftime('%d %B %Y')} &nbsp;|&nbsp; 671 ISINs monitored</p>
-      </div>
-      <div style="border:1px solid #ddd;border-top:none;padding:16px;border-radius:0 0 6px 6px;">
-        {urgent_section}
-        {upcoming_section}
-        {no_action}
-        <p style="font-size:11px;color:#999;margin-top:24px;">
-          Monitored actions: Rights Issues, Buybacks, Open Offers, Dividends<br>
-          Source: NSE / BSE &nbsp;|&nbsp; Sent by MARVIN
-        </p>
-      </div>
-    </body></html>"""
-    return html
-
-
-# ── Send email ──
-def send_email(subject, html):
-    try:
-        gmail.send_email(
-            to=[TO_EMAIL],
-            subject=subject,
-            body="",
-            html=html,
-            attachments=[],
-            cc=[],
-            thread_id="",
-            sender=FROM_EMAIL,
-            forward_thread_id="",
-        )
-        print("  Email sent.")
-    except Exception as e:
-        print(f"  Email FAILED: {e}")
 
 
 # ── Main ──

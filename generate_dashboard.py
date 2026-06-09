@@ -1,6 +1,6 @@
 """
 Generates a self-contained HTML dashboard from CA match data.
-Called by ca_monitor.py after each fetch. Output: ca_dashboard.html
+Called by ca_monitor.py after each fetch. Output: index.html
 """
 from pathlib import Path
 from datetime import datetime
@@ -12,10 +12,6 @@ def generate(matches, total_isins, last_updated):
     urgent   = [m for m in matches if m["urgent"]]
     missed   = [m for m in matches if m.get("missed")]
     upcoming = [m for m in matches if not m["urgent"] and not m.get("missed")]
-
-    # Embed data as JS
-    import json
-    data_js = json.dumps(matches)
 
     # CA type badge colours
     type_colors = {
@@ -54,7 +50,7 @@ def generate(matches, total_isins, last_updated):
             </tr>"""
         return out
 
-    all_rows = rows(missed) + rows(urgent) + rows(upcoming)
+    all_rows = rows(missed + urgent + upcoming)
 
     ca_types = sorted(set(m["ca_type"] for m in matches))
     filter_btns = "".join(
@@ -158,8 +154,6 @@ def generate(matches, total_isins, last_updated):
 </div>
 
 <script>
-const allData = {data_js};
-
 function filterTable() {{
   const q = document.getElementById('searchBox').value.toLowerCase();
   const rows = document.querySelectorAll('#caTableBody tr');
