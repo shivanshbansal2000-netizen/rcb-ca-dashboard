@@ -16,10 +16,11 @@ from urllib.parse import quote_plus
 import xml.etree.ElementTree as ET
 import requests
 
-HERE            = Path(__file__).parent
-ISIN_FILE       = HERE / "rcb_isins.json"
-SECTOR_MAP_FILE = HERE / "sector_map.json"
-OUT_FILE        = HERE / "news_data.json"
+HERE              = Path(__file__).parent
+ISIN_FILE         = HERE / "rcb_isins.json"
+SECTOR_MAP_FILE   = HERE / "sector_map.json"
+WATCHLIST_FILE    = HERE / "top100_watchlist.json"
+OUT_FILE          = HERE / "news_data.json"
 
 # Categories to INCLUDE from BSE (non-CA actionable filings)
 BSE_INCLUDE_KW = [
@@ -71,35 +72,49 @@ IST = timezone(timedelta(hours=5, minutes=30))
 
 # ── helpers ──
 
-def load_isins():
+def load_watchlist():
+    """Load top100_watchlist.json — preferred. Falls back to full ISIN set."""
+    if WATCHLIST_FILE.exists():
+        try:
+            data = json.loads(WATCHLIST_FILE.read_text())
+            # {isin: name} dict for BSE filtering; include only stocks with a real ISIN
+            isin_map = {s["isin"]: s["name"] for s in data if s.get("isin")}
+            sectors  = {}
+            for s in data:
+                sec = s.get("sector", "Other")
+                if sec and sec not in ("Other", "Sovereign"):
+                    sectors[sec] = sectors.get(sec, 0) + 1
+            top_sec = sorted(sectors.items(), key=lambda x: -x[1])[:6]
+            print(f"  Watchlist: {len(isin_map)} ISINs from top-100 holdings")
+            return isin_map, top_sec
+        except Exception as e:
+            print(f"  Watchlist load error: {e}")
+
+    # Fallback: use full ISIN set from env/file
     env_isins = os.environ.get("RCB_ISINS")
     if env_isins:
-        return json.loads(env_isins.lstrip("﻿"))
-    if ISIN_FILE.exists():
-        return json.loads(ISIN_FILE.read_text())
-    return {}
+        all_isins = json.loads(env_isins.lstrip("﻿"))
+    elif ISIN_FILE.exists():
+        all_isins = json.loads(ISIN_FILE.read_text())
+    else:
+        all_isins = {}
 
-
-def load_sector_map():
+    # Derive sectors from sector_map
+    sector_map = {}
     if SECTOR_MAP_FILE.exists():
         try:
-            return json.loads(SECTOR_MAP_FILE.read_text())
+            sector_map = json.loads(SECTOR_MAP_FILE.read_text())
         except Exception:
             pass
-    return {}
 
-
-def top_sectors(sector_map, our_isins, n=6):
-    if not sector_map:
-        return FALLBACK_SECTORS[:n]
     counts = {}
-    for isin in our_isins:
+    for isin in all_isins:
         s = sector_map.get(isin, {}).get("sector", "Other")
         if s and s != "Other":
             counts[s] = counts.get(s, 0) + 1
-    if not counts:
-        return FALLBACK_SECTORS[:n]
-    return sorted(counts.items(), key=lambda x: -x[1])[:n]
+    top_sec = sorted(counts.items(), key=lambda x: -x[1])[:6] if counts else FALLBACK_SECTORS[:6]
+    print(f"  Fallback: {len(all_isins)} ISINs from full holdings")
+    return all_isins, top_sec
 
 
 def impact_for_count(count):
@@ -291,11 +306,7 @@ def main():
     print(f"MARVIN News Fetcher -- {datetime.now(IST).strftime('%d %b %Y %H:%M IST')}")
     print(f"{'='*60}")
 
-    our_isins  = load_isins()
-    sector_map = load_sector_map()
-    print(f"ISINs: {len(our_isins)}  |  Sector map: {len(sector_map)} entries")
-
-    sectors = top_sectors(sector_map, our_isins, n=6)
+    our_isins, sectors = load_watchlist()
     print(f"Top sectors: {[s for s, _ in sectors]}")
 
     all_items = []
@@ -307,7 +318,7 @@ def main():
     all_items += fetch_macro_news()
 
     print("\n[3/3] Sector News (Google News)")
-    all_items += fetch_sector_news(sectors, len(our_isins))
+    all_items += fetch_sector_news(sectors, len(our_isins) or 100)
 
     # Sort: HIGH first, then MEDIUM, then LOW
     order = {"HIGH": 0, "MEDIUM": 1, "LOW": 2}

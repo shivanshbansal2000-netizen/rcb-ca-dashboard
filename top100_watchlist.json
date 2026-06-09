@@ -1,0 +1,802 @@
+[
+  {
+    "rank": 1,
+    "name": "RELIANCE INDUSTRIES",
+    "combined": 38922065.4,
+    "isin": "INE002A01018",
+    "sector": "Oil Gas & Consumable Fuels",
+    "symbol": "RELIANCE"
+  },
+  {
+    "rank": 2,
+    "name": "GOVERNMENT OF INDIA",
+    "combined": 30954170.88,
+    "isin": null,
+    "sector": "Sovereign",
+    "symbol": ""
+  },
+  {
+    "rank": 3,
+    "name": "TRENT LIMITED",
+    "combined": 23797983.06,
+    "isin": "INE849A01020",
+    "sector": "Consumer Services",
+    "symbol": "TRENT"
+  },
+  {
+    "rank": 4,
+    "name": "LARSEN AND TOUBRO LIMITED",
+    "combined": 11713084.99,
+    "isin": "INE018A01030",
+    "sector": "Construction",
+    "symbol": "LT"
+  },
+  {
+    "rank": 5,
+    "name": "THE TATA POWER COMPANY",
+    "combined": 8966391.15,
+    "isin": "INE245A01021",
+    "sector": "Power",
+    "symbol": "TATAPOWER"
+  },
+  {
+    "rank": 6,
+    "name": "HDFC BANK LIMITED",
+    "combined": 8101477.32,
+    "isin": "INE040A01034",
+    "sector": "Financial Services",
+    "symbol": "HDFCBANK"
+  },
+  {
+    "rank": 7,
+    "name": "VEDANTA LIMITED",
+    "combined": 7372393.2,
+    "isin": "INE205A01025",
+    "sector": "Metals & Mining",
+    "symbol": "VEDL"
+  },
+  {
+    "rank": 8,
+    "name": "MAHARASHTRA SCOOTERS",
+    "combined": 6247090.61,
+    "isin": "INE288A01013",
+    "sector": "Financial Services",
+    "symbol": "MAHSCOOTER"
+  },
+  {
+    "rank": 9,
+    "name": "RADICO KHAITAN LIMITED",
+    "combined": 5797606.5,
+    "isin": "INE944F01028",
+    "sector": "Fast Moving Consumer Goods",
+    "symbol": "RADICO"
+  },
+  {
+    "rank": 10,
+    "name": "GE VERNOVA T&D INDIA",
+    "combined": 5613223.77,
+    "isin": "INE200A01026",
+    "sector": "Capital Goods",
+    "symbol": "GVT&D"
+  },
+  {
+    "rank": 11,
+    "name": "PIRAMAL FINANCE LIMITED",
+    "combined": 5573211,
+    "isin": "INE202B01038",
+    "sector": "Financial Services",
+    "symbol": "PIRAMALFIN"
+  },
+  {
+    "rank": 12,
+    "name": "ITC LIMITED",
+    "combined": 5567491.28,
+    "isin": "INE154A01025",
+    "sector": "Fast Moving Consumer Goods",
+    "symbol": "ITC"
+  },
+  {
+    "rank": 13,
+    "name": "JINDAL STEEL LIMITED",
+    "combined": 5007280.35,
+    "isin": "INE749A01030",
+    "sector": "Metals & Mining",
+    "symbol": "JINDALSTEL"
+  },
+  {
+    "rank": 14,
+    "name": "ABBOTT INDIA LIMITED",
+    "combined": 4965314,
+    "isin": "INE358A01014",
+    "sector": "Healthcare",
+    "symbol": "ABBOTINDIA"
+  },
+  {
+    "rank": 15,
+    "name": "SRF LIMITED",
+    "combined": 4810174,
+    "isin": "INE647A01010",
+    "sector": "Chemicals",
+    "symbol": "SRF"
+  },
+  {
+    "rank": 16,
+    "name": "HITACHI ENERGY INDIA",
+    "combined": 4628885,
+    "isin": "INE07Y701011",
+    "sector": "Capital Goods",
+    "symbol": "POWERINDIA"
+  },
+  {
+    "rank": 17,
+    "name": "THE RAMCO CEMENTS LIMITED",
+    "combined": 4163452.5,
+    "isin": "INE331A01037",
+    "sector": "Construction Materials",
+    "symbol": "RAMCOCEM"
+  },
+  {
+    "rank": 18,
+    "name": "ABB INDIA LIMITED",
+    "combined": 3844150.5,
+    "isin": "INE117A01022",
+    "sector": "Capital Goods",
+    "symbol": "ABB"
+  },
+  {
+    "rank": 19,
+    "name": "VOLTAS LIMITED",
+    "combined": 3745761.3,
+    "isin": "INE226A01021",
+    "sector": "Consumer Durables",
+    "symbol": "VOLTAS"
+  },
+  {
+    "rank": 20,
+    "name": "MAHINDRA AND MAHINDRA",
+    "combined": 3726355.2,
+    "isin": "INE774D01024",
+    "sector": "Financial Services",
+    "symbol": "M&MFIN"
+  },
+  {
+    "rank": 21,
+    "name": "BERGER PAINTS INDIA",
+    "combined": 3652690,
+    "isin": "INE463A01038",
+    "sector": "Consumer Durables",
+    "symbol": "BERGEPAINT"
+  },
+  {
+    "rank": 22,
+    "name": "JIO FINANCIAL SERVICES",
+    "combined": 3598127.19,
+    "isin": "INE758E01017",
+    "sector": "Financial Services",
+    "symbol": "JIOFIN"
+  },
+  {
+    "rank": 23,
+    "name": "SUNDRAM FASTENERS LIMITED",
+    "combined": 2919047.85,
+    "isin": "INE387A01021",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 24,
+    "name": "HINDUSTAN UNILEVER LIMITED",
+    "combined": 2821789.6,
+    "isin": "INE030A01027",
+    "sector": "Fast Moving Consumer Goods",
+    "symbol": "HINDUNILVR"
+  },
+  {
+    "rank": 25,
+    "name": "ICICI BANK LIMITED",
+    "combined": 2724128.1,
+    "isin": "INE090A01021",
+    "sector": "Financial Services",
+    "symbol": "ICICIBANK"
+  },
+  {
+    "rank": 26,
+    "name": "BHARTI AIRTEL LIMITED",
+    "combined": 2523878.4,
+    "isin": "INE397D01024",
+    "sector": "Telecommunication",
+    "symbol": "BHARTIARTL"
+  },
+  {
+    "rank": 27,
+    "name": "TATA STEEL LIMITED",
+    "combined": 2253520.41,
+    "isin": "INE081A01020",
+    "sector": "Metals & Mining",
+    "symbol": "TATASTEEL"
+  },
+  {
+    "rank": 28,
+    "name": "PIRAMAL PHARMA LIMITED",
+    "combined": 2232429,
+    "isin": "INE0DK501011",
+    "sector": "Healthcare",
+    "symbol": "PPLPHARMA"
+  },
+  {
+    "rank": 29,
+    "name": "ICICI PRUDENTIAL MUTUAL",
+    "combined": 2203494.18,
+    "isin": "INF109KC1KT9",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 30,
+    "name": "KIRLOSKAR FERROUS",
+    "combined": 2100443.29,
+    "isin": "INE884B01025",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 31,
+    "name": "BRITANNIA INDUSTRIES LTD",
+    "combined": 1963126,
+    "isin": "INE216A01030",
+    "sector": "Fast Moving Consumer Goods",
+    "symbol": "BRITANNIA"
+  },
+  {
+    "rank": 32,
+    "name": "VARDHMAN TEXTILES LIMITED",
+    "combined": 1941879.6,
+    "isin": "INE825A01020",
+    "sector": "Textiles",
+    "symbol": "VTL"
+  },
+  {
+    "rank": 33,
+    "name": "JINDAL STAINLESS LIMITED",
+    "combined": 1920652.75,
+    "isin": "INE220G01021",
+    "sector": "Metals & Mining",
+    "symbol": "JSL"
+  },
+  {
+    "rank": 34,
+    "name": "HDFC MUTUAL FUND",
+    "combined": 1832277.79,
+    "isin": "INF179KA1RT1",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 35,
+    "name": "STEEL AUTHORITY OF INDIA",
+    "combined": 1593051.97,
+    "isin": "INE114A01011",
+    "sector": "Metals & Mining",
+    "symbol": "SAIL"
+  },
+  {
+    "rank": 36,
+    "name": "SCHNEIDER ELECTRIC",
+    "combined": 1517301.76,
+    "isin": "INE839M01018",
+    "sector": "Capital Goods",
+    "symbol": "SCHNEIDER"
+  },
+  {
+    "rank": 37,
+    "name": "ULTRATECH CEMENT LIMITED",
+    "combined": 1470721.88,
+    "isin": "INE481G01011",
+    "sector": "Construction Materials",
+    "symbol": "ULTRACEMCO"
+  },
+  {
+    "rank": 38,
+    "name": "ALKYL AMINES CHEMICALS",
+    "combined": 1379699.9,
+    "isin": "INE150B01039",
+    "sector": "Chemicals",
+    "symbol": "ALKYLAMINE"
+  },
+  {
+    "rank": 39,
+    "name": "KOTAK MAHINDRA MUTUAL FUND",
+    "combined": 1308686.21,
+    "isin": "INF178L01202",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 40,
+    "name": "TECH MAHINDRA LIMITED",
+    "combined": 1193513.16,
+    "isin": "INE669C01036",
+    "sector": "Information Technology",
+    "symbol": "TECHM"
+  },
+  {
+    "rank": 41,
+    "name": "TATA CONSUMER PRODUCTS",
+    "combined": 1162920.21,
+    "isin": "INE192A01025",
+    "sector": "Fast Moving Consumer Goods",
+    "symbol": "TATACONSUM"
+  },
+  {
+    "rank": 42,
+    "name": "HCL TECHNOLOGIES LIMITED",
+    "combined": 1113528,
+    "isin": "INE860A01027",
+    "sector": "Information Technology",
+    "symbol": "HCLTECH"
+  },
+  {
+    "rank": 43,
+    "name": "KAJARIA CERAMICS LIMITED",
+    "combined": 1085718,
+    "isin": "INE217B01036",
+    "sector": "Consumer Durables",
+    "symbol": "KAJARIACER"
+  },
+  {
+    "rank": 44,
+    "name": "MUFIN GREEN FINANCE",
+    "combined": 1075792.3,
+    "isin": "INE08KJ07175",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 45,
+    "name": "MAX HEALTHCARE INSTITUTE",
+    "combined": 1041882.21,
+    "isin": "INE027H01010",
+    "sector": "Healthcare",
+    "symbol": "MAXHEALTH"
+  },
+  {
+    "rank": 46,
+    "name": "CUMMINS INDIA LIMITED",
+    "combined": 1023772.75,
+    "isin": "INE298A01020",
+    "sector": "Capital Goods",
+    "symbol": "CUMMINSIND"
+  },
+  {
+    "rank": 47,
+    "name": "TITAN COMPANY LIMITED",
+    "combined": 1020646.62,
+    "isin": "INE280A01028",
+    "sector": "Consumer Durables",
+    "symbol": "TITAN"
+  },
+  {
+    "rank": 48,
+    "name": "NIPPON INDIA MUTUAL FUND",
+    "combined": 952266.98,
+    "isin": "INF732E01037",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 49,
+    "name": "PCBL CHEMICAL LIMITED",
+    "combined": 938766,
+    "isin": "INE602A01031",
+    "sector": "Chemicals",
+    "symbol": "PCBL"
+  },
+  {
+    "rank": 50,
+    "name": "GODFREY PHILLIPS INDIA",
+    "combined": 918015,
+    "isin": "INE260B01028",
+    "sector": "Fast Moving Consumer Goods",
+    "symbol": "GODFRYPHLP"
+  },
+  {
+    "rank": 51,
+    "name": "DALMIA BHARAT LIMITED",
+    "combined": 909171.2,
+    "isin": "INE00R701025",
+    "sector": "Construction Materials",
+    "symbol": "DALBHARAT"
+  },
+  {
+    "rank": 52,
+    "name": "ADITYA BIRLA CAPITAL",
+    "combined": 905975,
+    "isin": "INE674K01013",
+    "sector": "Financial Services",
+    "symbol": "ABCAPITAL"
+  },
+  {
+    "rank": 53,
+    "name": "LINDE INDIA LIMITED",
+    "combined": 852078,
+    "isin": "INE473A01011",
+    "sector": "Chemicals",
+    "symbol": "LINDEINDIA"
+  },
+  {
+    "rank": 54,
+    "name": "EPL LIMITED",
+    "combined": 841196.46,
+    "isin": "INE255A01020",
+    "sector": "Capital Goods",
+    "symbol": "EPL"
+  },
+  {
+    "rank": 55,
+    "name": "TATA CONSULTANCY SERVICES",
+    "combined": 839768.4,
+    "isin": "INE467B01029",
+    "sector": "Information Technology",
+    "symbol": "TCS"
+  },
+  {
+    "rank": 56,
+    "name": "KIRLOSKAR OIL ENGINES",
+    "combined": 836542.55,
+    "isin": "INE146L01010",
+    "sector": "Capital Goods",
+    "symbol": "KIRLOSENG"
+  },
+  {
+    "rank": 57,
+    "name": "GMM PFAUDLER LIMITED",
+    "combined": 832650,
+    "isin": "INE541A01023",
+    "sector": "Capital Goods",
+    "symbol": "GMMPFAUDLR"
+  },
+  {
+    "rank": 58,
+    "name": "HSBC MUTUAL FUND",
+    "combined": 826728.1,
+    "isin": "INF917K01LB0",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 59,
+    "name": "ONE 97 COMMUNICATIONS",
+    "combined": 819945,
+    "isin": "INE982J01020",
+    "sector": "Financial Services",
+    "symbol": "PAYTM"
+  },
+  {
+    "rank": 60,
+    "name": "IST LIMITED",
+    "combined": 801610.43,
+    "isin": "INE684B01029",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 61,
+    "name": "BLUE STAR LIMITED",
+    "combined": 776317.13,
+    "isin": "INE472A01039",
+    "sector": "Consumer Durables",
+    "symbol": "BLUESTARCO"
+  },
+  {
+    "rank": 62,
+    "name": "JK LAKSHMI CEMENT LIMITED",
+    "combined": 764528.5,
+    "isin": "INE786A01032",
+    "sector": "Construction Materials",
+    "symbol": "JKLAKSHMI"
+  },
+  {
+    "rank": 63,
+    "name": "GRASIM INDUSTRIES LTD",
+    "combined": 751746.4,
+    "isin": "INE047A01021",
+    "sector": "Construction Materials",
+    "symbol": "GRASIM"
+  },
+  {
+    "rank": 64,
+    "name": "INFOSYS LIMITED",
+    "combined": 740355.2,
+    "isin": "INE009A01021",
+    "sector": "Information Technology",
+    "symbol": "INFY"
+  },
+  {
+    "rank": 65,
+    "name": "FSN E-COMMERCE VENTURES",
+    "combined": 727795,
+    "isin": "INE388Y01029",
+    "sector": "Consumer Services",
+    "symbol": "NYKAA"
+  },
+  {
+    "rank": 66,
+    "name": "GLAXOSMITHKLINE",
+    "combined": 720286.5,
+    "isin": "INE159A01016",
+    "sector": "Healthcare",
+    "symbol": "GLAXO"
+  },
+  {
+    "rank": 67,
+    "name": "THE INDIAN HOTELS COMPANY",
+    "combined": 718360.73,
+    "isin": "INE053A01029",
+    "sector": "Consumer Services",
+    "symbol": "INDHOTEL"
+  },
+  {
+    "rank": 68,
+    "name": "DYNAMATIC TECHNOLOGIES",
+    "combined": 709537.5,
+    "isin": "INE221B01012",
+    "sector": "Capital Goods",
+    "symbol": "DYNAMATECH"
+  },
+  {
+    "rank": 69,
+    "name": "TUBE INVESTMENTS OF INDIA",
+    "combined": 705725.06,
+    "isin": "INE974X01010",
+    "sector": "Capital Goods",
+    "symbol": "TIINDIA"
+  },
+  {
+    "rank": 70,
+    "name": "TECHNO ELECTRIC &",
+    "combined": 689570,
+    "isin": "INE285K01026",
+    "sector": "Construction",
+    "symbol": "TECHNOE"
+  },
+  {
+    "rank": 71,
+    "name": "RAYMOND LIFESTYLE LIMITED",
+    "combined": 660498.55,
+    "isin": "INE02ID01020",
+    "sector": "Textiles",
+    "symbol": "RAYMONDLSL"
+  },
+  {
+    "rank": 72,
+    "name": "MAX FINANCIAL SERVICES",
+    "combined": 655908,
+    "isin": "INE180A01020",
+    "sector": "Financial Services",
+    "symbol": "MFSL"
+  },
+  {
+    "rank": 73,
+    "name": "ADANI PORTS AND SPECIAL",
+    "combined": 651049.6,
+    "isin": "INE742F01042",
+    "sector": "Services",
+    "symbol": "ADANIPORTS"
+  },
+  {
+    "rank": 74,
+    "name": "CANARA BANK",
+    "combined": 647742.15,
+    "isin": "INE476A01022",
+    "sector": "Financial Services",
+    "symbol": "CANBK"
+  },
+  {
+    "rank": 75,
+    "name": "VOITH PAPER FABRICS INDIA",
+    "combined": 619358.3,
+    "isin": "INE285C01015",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 76,
+    "name": "LAURUS LABS LIMITED",
+    "combined": 603561.6,
+    "isin": "INE947Q01028",
+    "sector": "Healthcare",
+    "symbol": "LAURUSLABS"
+  },
+  {
+    "rank": 77,
+    "name": "HINDUSTAN ZINC LIMITED",
+    "combined": 589021.95,
+    "isin": "INE267A01025",
+    "sector": "Metals & Mining",
+    "symbol": "HINDZINC"
+  },
+  {
+    "rank": 78,
+    "name": "UTI MUTUAL FUND",
+    "combined": 586361.16,
+    "isin": "INF789F1AZG1",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 79,
+    "name": "SIEMENS LIMITED",
+    "combined": 575260,
+    "isin": "INE003A01024",
+    "sector": "Capital Goods",
+    "symbol": "SIEMENS"
+  },
+  {
+    "rank": 80,
+    "name": "ESCORTS KUBOTA LIMITED",
+    "combined": 574914.94,
+    "isin": "INE042A01014",
+    "sector": "Capital Goods",
+    "symbol": "ESCORTS"
+  },
+  {
+    "rank": 81,
+    "name": "CENTRAL DEPOSITORY",
+    "combined": 573132.8,
+    "isin": "INE736A01011",
+    "sector": "Financial Services",
+    "symbol": "CDSL"
+  },
+  {
+    "rank": 82,
+    "name": "JSW STEEL LIMITED",
+    "combined": 568383.49,
+    "isin": "INE019A01038",
+    "sector": "Metals & Mining",
+    "symbol": "JSWSTEEL"
+  },
+  {
+    "rank": 83,
+    "name": "ZENSAR TECHNOLOGIES",
+    "combined": 567291.38,
+    "isin": "INE520A01027",
+    "sector": "Information Technology",
+    "symbol": "ZENSARTECH"
+  },
+  {
+    "rank": 84,
+    "name": "GE POWER INDIA LIMITED",
+    "combined": 557470.8,
+    "isin": "INE878A01011",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 85,
+    "name": "THE GREAT EASTERN SHIPPING",
+    "combined": 543244.8,
+    "isin": "INE017A01032",
+    "sector": "Services",
+    "symbol": "GESHIP"
+  },
+  {
+    "rank": 86,
+    "name": "PROCTER & GAMBLE HEALTH",
+    "combined": 542264.4,
+    "isin": "INE199A01012",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 87,
+    "name": "NEULAND LABORATORIES",
+    "combined": 541215,
+    "isin": "INE794A01010",
+    "sector": "Healthcare",
+    "symbol": "NEULANDLAB"
+  },
+  {
+    "rank": 88,
+    "name": "BHARAT HEAVY ELECTRICALS",
+    "combined": 524388,
+    "isin": "INE257A01026",
+    "sector": "Capital Goods",
+    "symbol": "BHEL"
+  },
+  {
+    "rank": 89,
+    "name": "APOLLO TYRES LIMITED",
+    "combined": 515375,
+    "isin": "INE438A01022",
+    "sector": "Automobile and Auto Components",
+    "symbol": "APOLLOTYRE"
+  },
+  {
+    "rank": 90,
+    "name": "SIEMENS ENERGY INDIA",
+    "combined": 502838,
+    "isin": "INE1NPP01017",
+    "sector": "Capital Goods",
+    "symbol": "ENRIN"
+  },
+  {
+    "rank": 91,
+    "name": "HAWKINS COOKERS LIMITED",
+    "combined": 492069.6,
+    "isin": "INE979B01015",
+    "sector": "Other",
+    "symbol": ""
+  },
+  {
+    "rank": 92,
+    "name": "HBL POWER SYSTEMS LIMITED",
+    "combined": 484155,
+    "isin": "INE292B01021",
+    "sector": "Capital Goods",
+    "symbol": "HBLENGINE"
+  },
+  {
+    "rank": 93,
+    "name": "SUMITOMO CHEMICAL INDIA",
+    "combined": 482896.25,
+    "isin": "INE258G01013",
+    "sector": "Chemicals",
+    "symbol": "SUMICHEM"
+  },
+  {
+    "rank": 94,
+    "name": "BAJAJ FINANCE LIMITED",
+    "combined": 472914.5,
+    "isin": "INE296A01032",
+    "sector": "Financial Services",
+    "symbol": "BAJFINANCE"
+  },
+  {
+    "rank": 95,
+    "name": "KOTAK MAHINDRA BANK",
+    "combined": 454119,
+    "isin": "INE237A01036",
+    "sector": "Financial Services",
+    "symbol": "KOTAKBANK"
+  },
+  {
+    "rank": 96,
+    "name": "CARBORUNDUM UNIVERSAL",
+    "combined": 449906,
+    "isin": "INE120A01034",
+    "sector": "Capital Goods",
+    "symbol": "CARBORUNIV"
+  },
+  {
+    "rank": 97,
+    "name": "GUJARAT MINERAL",
+    "combined": 445843.12,
+    "isin": "INE131A01031",
+    "sector": "Metals & Mining",
+    "symbol": "GMDCLTD"
+  },
+  {
+    "rank": 98,
+    "name": "SUBROS LIMITED",
+    "combined": 444675,
+    "isin": "INE287B01021",
+    "sector": "Capital Goods",
+    "symbol": "SUBROS"
+  },
+  {
+    "rank": 99,
+    "name": "UNION BANK OF INDIA",
+    "combined": 444325.2,
+    "isin": "INE692A01016",
+    "sector": "Financial Services",
+    "symbol": "UNIONBANK"
+  },
+  {
+    "rank": 100,
+    "name": "HFCL LIMITED",
+    "combined": 436611.24,
+    "isin": "INE548A01028",
+    "sector": "Telecommunication",
+    "symbol": "HFCL"
+  }
+]
