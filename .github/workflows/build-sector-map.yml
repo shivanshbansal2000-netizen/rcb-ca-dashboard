@@ -1,8 +1,6 @@
-name: Daily CA Dashboard
+name: Build Sector Map (run once)
 
 on:
-  schedule:
-    - cron: "30 3 * * *"  # 9:00 AM IST daily
   workflow_dispatch:
 
 permissions:
@@ -23,20 +21,15 @@ jobs:
 
       - run: pip install requests
 
-      - name: Fetch news and events
-        run: python fetch_news.py
+      - name: Build sector map
+        run: python build_sector_map.py
         env:
           RCB_ISINS: ${{ secrets.RCB_ISINS }}
 
-      - name: Generate dashboard
-        run: python ca_monitor.py
-        env:
-          RCB_ISINS: ${{ secrets.RCB_ISINS }}
-
-      - name: Commit and push dashboard
+      - name: Commit sector map
         run: |
           git config user.name "MARVIN"
           git config user.email "actions@github.com"
-          git add index.html
-          git diff --cached --quiet || git commit -m "dashboard: $(date +'%d %b %Y %H:%M IST')"
+          git add sector_map.json
+          git diff --cached --quiet || git commit -m "data: sector map for RCB holdings"
           git push
