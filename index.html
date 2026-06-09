@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARVIN - CA Dashboard | RCB Holdings</title>
+<title>MARVIN - RCB Dashboard</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #F4F6F9; color: #212529; }
@@ -11,18 +11,17 @@
   .header h1 { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; }
   .header p { font-size: 12px; opacity: 0.8; margin-top: 4px; }
   .header .updated { font-size: 11px; opacity: 0.7; text-align: right; }
+  .tab-nav { background: #1a3070; padding: 0 32px; display: flex; gap: 4px; }
+  .tab-btn { background: transparent; border: none; color: rgba(255,255,255,0.65); padding: 12px 20px; cursor: pointer; font-size: 13px; font-weight: 600; border-bottom: 3px solid transparent; transition: all 0.15s; }
+  .tab-btn:hover { color: white; }
+  .tab-btn.active { color: white; border-bottom-color: #FFC107; }
   .stats { display: flex; gap: 16px; padding: 20px 32px; }
   .stat-card { background: white; border-radius: 10px; padding: 16px 24px; flex: 1; box-shadow: 0 1px 4px rgba(0,0,0,0.08); border-left: 4px solid #ddd; }
-  .stat-card.urgent { border-left-color: #DC3545; }
-  .stat-card.total  { border-left-color: #0D6EFD; }
-  .stat-card.watch  { border-left-color: #198754; }
   .stat-card .val { font-size: 28px; font-weight: 700; }
   .stat-card .lbl { font-size: 12px; color: #888; margin-top: 2px; }
   .section { margin: 0 32px 24px; background: white; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); overflow: hidden; }
   .section-header { padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
   .section-header h2 { font-size: 14px; font-weight: 700; }
-  .section-header.urgent { background: #FFF5F5; }
-  .section-header.upcoming { background: #F0F7FF; }
   .filters { padding: 12px 20px; border-bottom: 1px solid #eee; background: #FAFAFA; }
   .filters span { font-size: 12px; color: #888; margin-right: 8px; }
   table { width: 100%; border-collapse: collapse; }
@@ -33,6 +32,14 @@
   .no-data { padding: 40px; text-align: center; color: #888; font-size: 14px; }
   .refresh-btn { background: white; border: 1px solid #ddd; border-radius: 6px; padding: 6px 14px; font-size: 12px; cursor: pointer; color: #555; }
   .refresh-btn:hover { background: #F4F6F9; }
+  .impact-meter { display: flex; gap: 16px; padding: 20px 32px 8px; }
+  .impact-card { background: white; border-radius: 10px; padding: 16px 28px; flex: 0 0 auto; box-shadow: 0 1px 4px rgba(0,0,0,0.08); text-align: center; cursor: pointer; transition: transform 0.1s; }
+  .impact-card:hover { transform: translateY(-2px); }
+  .impact-card .count { font-size: 32px; font-weight: 700; }
+  .impact-card .label { font-size: 12px; color: #888; margin-top: 2px; }
+  .impact-card.high { border-left: 4px solid #DC3545; }
+  .impact-card.medium { border-left: 4px solid #E67E00; }
+  .impact-card.low { border-left: 4px solid #0D6EFD; }
   .footer { text-align: center; padding: 16px; font-size: 11px; color: #aaa; }
 </style>
 </head>
@@ -40,29 +47,41 @@
 
 <div class="header">
   <div>
-    <h1>MARVIN - Corporate Action Dashboard</h1>
-    <p>RCB Family Holdings &nbsp;|&nbsp; 671 ISINs monitored &nbsp;|&nbsp; Next 30 days</p>
+    <h1>MARVIN - RCB Holdings Dashboard</h1>
+    <p>671 ISINs monitored &nbsp;|&nbsp; Corporate Actions + News & Events</p>
   </div>
   <div class="updated">
-    Last updated<br><strong>09 Jun 2026 13:47</strong><br><br>
+    Last updated<br><strong>09 Jun 2026 18:41</strong><br><br>
     <button class="refresh-btn" onclick="location.reload()">Refresh</button>
   </div>
 </div>
 
+<div class="tab-nav">
+  <button class="tab-btn active" id="btn-ca" onclick="switchTab('ca', this)">
+    Corporate Actions &nbsp;<span style="background:rgba(255,255,255,0.25);border-radius:10px;padding:1px 7px;font-size:10px;">37</span>
+  </button>
+  <button class="tab-btn" id="btn-news" onclick="switchTab('news', this)">
+    News &amp; Events
+  </button>
+</div>
+
+<!-- ══ CA TAB ══ -->
+<div id="tab-ca">
+
 <div class="stats">
-  <div class="stat-card urgent">
-    <div class="val">16</div>
+  <div class="stat-card" style="border-left-color:#DC3545;">
+    <div class="val" style="color:#DC3545;">16</div>
     <div class="lbl">Urgent (within 10 days)</div>
   </div>
   <div class="stat-card" style="border-left-color:#DC3545;background:#FFF5F5;">
     <div class="val" style="color:#DC3545;">11</div>
     <div class="lbl">Recently Missed (last 14 days)</div>
   </div>
-  <div class="stat-card total">
+  <div class="stat-card" style="border-left-color:#0D6EFD;">
     <div class="val">37</div>
     <div class="lbl">Total Actions</div>
   </div>
-  <div class="stat-card watch">
+  <div class="stat-card" style="border-left-color:#198754;">
     <div class="val">671</div>
     <div class="lbl">ISINs Monitored</div>
   </div>
@@ -78,12 +97,12 @@
     <span style="font-size:12px;color:#888;">37 records</span>
   </div>
   <div class="search-bar">
-    <input type="text" id="searchBox" placeholder="Search by stock name, ISIN, or action type..." onkeyup="filterTable()">
+    <input type="text" id="caSearch" placeholder="Search by stock name, ISIN, or action type..." onkeyup="filterCaTable()">
   </div>
   <div class="filters">
     <span>Filter:</span>
-    <button onclick="filterType('ALL')" style="margin:3px;padding:5px 12px;border:1px solid #1F3864;border-radius:20px;background:#1F3864;color:white;cursor:pointer;font-size:12px;">All</button>
-    <button onclick="filterType('Buyback')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Buyback</button><button onclick="filterType('Dividend')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Dividend</button><button onclick="filterType('Interim Dividend')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Interim Dividend</button>
+    <button onclick="filterCa('ALL')" style="margin:3px;padding:5px 12px;border:1px solid #1F3864;border-radius:20px;background:#1F3864;color:white;cursor:pointer;font-size:12px;">All</button>
+    <button onclick="filterCa('Buyback')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Buyback</button><button onclick="filterCa('Dividend')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Dividend</button><button onclick="filterCa('Interim Dividend')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Interim Dividend</button>
   </div>
   <table><thead><tr><th>#</th><th>Stock Name</th><th>ISIN</th><th>Action</th><th>Key Date</th><th>Days Left</th><th>Details</th></tr></thead><tbody id="caTableBody">
             <tr style="background:#FFE8E8">
@@ -421,25 +440,106 @@
             </tr></tbody></table>
 </div>
 
+</div><!-- /tab-ca -->
+
+<!-- ══ NEWS TAB ══ -->
+<div id="tab-news" style="display:none;">
+
+<div class="impact-meter">
+  <div class="impact-card high" onclick="filterNews('HIGH')">
+    <div class="count" style="color:#DC3545;">0</div>
+    <div class="label">HIGH Impact</div>
+  </div>
+  <div class="impact-card medium" onclick="filterNews('MEDIUM')">
+    <div class="count" style="color:#E67E00;">0</div>
+    <div class="label">MEDIUM Impact</div>
+  </div>
+  <div class="impact-card low" onclick="filterNews('LOW')">
+    <div class="count" style="color:#0D6EFD;">1</div>
+    <div class="label">LOW Impact</div>
+  </div>
+  <div class="impact-card" style="border-left:4px solid #198754;cursor:default;">
+    <div class="count" style="color:#198754;">1</div>
+    <div class="label">Total Items</div>
+  </div>
+</div>
+
+<div class="section" style="margin-top:8px;">
+  <div class="section-header">
+    <h2>News &amp; Events</h2>
+    <span style="font-size:12px;color:#888;">Last 48 hours &nbsp;|&nbsp; 1 items</span>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="newsSearch" placeholder="Search headlines, sectors, categories..." onkeyup="filterNewsTable()">
+  </div>
+  <div class="filters">
+    <span>Impact:</span>
+    <button onclick="filterNews('ALL')" style="margin:3px;padding:5px 12px;border:1px solid #1F3864;border-radius:20px;background:#1F3864;color:white;cursor:pointer;font-size:12px;">All</button>
+    <button onclick="filterNews('HIGH')"   style="margin:3px;padding:5px 12px;border:1px solid #DC3545;border-radius:20px;background:#fff;color:#DC3545;cursor:pointer;font-size:12px;font-weight:700;">HIGH</button>
+    <button onclick="filterNews('MEDIUM')" style="margin:3px;padding:5px 12px;border:1px solid #E67E00;border-radius:20px;background:#fff;color:#E67E00;cursor:pointer;font-size:12px;font-weight:700;">MEDIUM</button>
+    <button onclick="filterNews('LOW')"    style="margin:3px;padding:5px 12px;border:1px solid #0D6EFD;border-radius:20px;background:#fff;color:#0D6EFD;cursor:pointer;font-size:12px;font-weight:700;">LOW</button>
+    &nbsp;<span>Category:</span>
+    <button onclick="filterNewsCat('Exchange Filing')"  style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Exchange Filings</button>
+    <button onclick="filterNewsCat('Sector News')"      style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Sector News</button>
+    <button onclick="filterNewsCat('Macro')"            style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Macro</button>
+  </div>
+  <table><thead><tr><th>#</th><th>Date</th><th>Headline</th><th>Category</th><th>Company / Sector</th><th>Holdings Affected</th><th>Impact</th></tr></thead><tbody id="newsTableBody">
+            <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">1</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">09/06/2026 08:00</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi9gFBVV95cUxObkJIN3k0eHUyZTBRYkstTk5vaEd3anlVSTB5QkpWRm1ERUg5bnFudVF5THZvc2xKYl9oYVgzX3huaHUtaFE3NWZvT2s0ZUIyNnc0NHBjNE1McE9mVm9BQWlVTWdOZGVSRm1OdEhiNlNSZlRjVFgtdzFkblFSMVAwTXVDWDhtSnJrdHJDR2FseHlCRTVOOUZ4ZmVmeUh1WHhZRTRMZllqMGlGQVJwd1c0emFVYkVWb2owRFJYeXpiWTZxLVVvZEk3MTJBS3d0bUUteE5hckpSRTJrWGdKRVRvbWQ5Z0p0R0lUeUU4aEJGOFJvenlkSFE?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Stocks To Buy or Sell Today, June 9, 2026: LIC, GAIL, and Tata Steel Among Shares That May Remain in Spotlight</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Chemicals</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">18 holdings</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;">LOW</span></td>
+            </tr></tbody></table>
+</div>
+
+</div><!-- /tab-news -->
+
 <div class="footer">
-  MARVIN &nbsp;|&nbsp; Source: NSE / BSE &nbsp;|&nbsp; RCB Holdings only &nbsp;|&nbsp; Run ca_monitor.py to refresh
+  MARVIN &nbsp;|&nbsp; Sources: NSE / BSE / RBI / SEBI / Google News &nbsp;|&nbsp; RCB Holdings only
 </div>
 
 <script>
-function filterTable() {
-  const q = document.getElementById('searchBox').value.toLowerCase();
-  const rows = document.querySelectorAll('#caTableBody tr');
-  rows.forEach(r => {
-    const txt = r.innerText.toLowerCase();
-    r.style.display = txt.includes(q) ? '' : 'none';
+function switchTab(name, btn) {
+  document.getElementById('tab-ca').style.display    = (name === 'ca')   ? '' : 'none';
+  document.getElementById('tab-news').style.display  = (name === 'news') ? '' : 'none';
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function filterCaTable() {
+  const q = document.getElementById('caSearch').value.toLowerCase();
+  document.querySelectorAll('#caTableBody tr').forEach(r => {
+    r.style.display = r.innerText.toLowerCase().includes(q) ? '' : 'none';
   });
 }
 
-function filterType(type) {
-  const rows = document.querySelectorAll('#caTableBody tr');
-  rows.forEach(r => {
+function filterCa(type) {
+  document.querySelectorAll('#caTableBody tr').forEach(r => {
     if (type === 'ALL') { r.style.display = ''; return; }
     r.style.display = r.innerText.toLowerCase().includes(type.toLowerCase()) ? '' : 'none';
+  });
+}
+
+function filterNewsTable() {
+  const q = document.getElementById('newsSearch').value.toLowerCase();
+  document.querySelectorAll('#newsTableBody .news-row').forEach(r => {
+    r.style.display = r.innerText.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+
+function filterNews(impact) {
+  document.querySelectorAll('#newsTableBody .news-row').forEach(r => {
+    if (impact === 'ALL') { r.style.display = ''; return; }
+    r.style.display = r.dataset.impact === impact ? '' : 'none';
+  });
+}
+
+function filterNewsCat(cat) {
+  document.querySelectorAll('#newsTableBody .news-row').forEach(r => {
+    r.style.display = r.dataset.category.includes(cat) ? '' : 'none';
   });
 }
 </script>
