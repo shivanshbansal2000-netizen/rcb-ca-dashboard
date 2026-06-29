@@ -67,6 +67,10 @@ def generate(matches, total_isins, last_updated):
             urgbg    = "#FFE8E8" if is_missed else ("#FFF8E1" if m["urgent"] else ("#F9F9F9" if i % 2 else "#FFFFFF"))
             days_c   = "#888" if is_missed else ("#DC3545" if m["urgent"] else ("#E67E00" if m["days_left"] <= 20 else "#198754"))
             days_lbl = f"{abs(m['days_left'])}d ago" if is_missed else f"{m['days_left']}d"
+            detail   = m["subject"][:120]
+            if m.get("verify_url"):
+                detail += (f' <a href="{m["verify_url"]}" target="_blank" rel="noopener" '
+                           f'style="color:#198754;font-weight:600;white-space:nowrap;">verify ↗</a>')
             out += f"""
             <tr style="background:{urgbg}">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">{i+1}</td>
@@ -75,7 +79,7 @@ def generate(matches, total_isins, last_updated):
               <td style="padding:9px 12px;border-bottom:1px solid #eee;">{ca_badge(m['ca_type'])}</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">{m['key_date']}</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:{days_c};">{days_lbl}</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">{m['subject'][:90]}</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">{detail}</td>
             </tr>"""
         return out
 

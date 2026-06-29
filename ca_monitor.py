@@ -33,6 +33,15 @@ CA_TYPES_WATCH = {
 URGENT_DAYS  = 10   # flag as URGENT if deadline within this many days
 LOOKBACK_DAYS = 14  # also surface recently missed past actions
 
+# Rights issues: NSE exposes only the record date, not the subscription
+# open/close window (that lives in the company's offer letter / press release).
+# A rights subscription typically opens ~1-2 weeks after the record date and
+# stays open ~2-4 weeks, so we ESTIMATE the close as record_date + the value
+# below and keep the rights visible (with a "verify" link) until then.
+RIGHTS_EST_CLOSE_DAYS  = 45   # estimated subscription close ≈ record date + this
+RIGHTS_FETCH_LOOKBACK  = 55   # fetch this far back so past record dates are returned
+RIGHTS_GRACE_DAYS      = 5    # keep showing a rights issue this many days past est. close
+
 
 # ── Load ISINs ──
 def load_isins():
@@ -207,26 +216,50 @@ def filter_ca(ca_list, our_isins, isin_symbol_map):
                     pass
             return None
 
-        key_date = parse_date(rec_raw) or parse_date(ex_raw)
-        if not key_date:
+        record_date = parse_date(rec_raw) or parse_date(ex_raw)
+        if not record_date:
             continue
 
-        days_left = (key_date - today).days
-        if days_left < -LOOKBACK_DAYS or days_left > WINDOW_DAYS:
-            continue
+        verify_url = ""
+
+        if ca_type == "Rights Issue":
+            # No subscription-window feed exists — estimate the close date and
+            # track days-to-(estimated)-close instead of days-to-record-date,
+            # so an open rights issue stays visible after its record date passes.
+            est_close   = record_date + timedelta(days=RIGHTS_EST_CLOSE_DAYS)
+            days_left   = (est_close - today).days
+            # drop only once we're past the estimated close (+ grace), or if the
+            # record date is still far in the future
+            if days_left < -RIGHTS_GRACE_DAYS or (record_date - today).days > WINDOW_DAYS:
+                continue
+            disp_date   = "~" + est_close.strftime("%d %b %Y")
+            subject     = (f"{subject} | Record {record_date.strftime('%d %b %Y')} · "
+                           f"subscription likely OPEN — est. close {est_close.strftime('%d %b %Y')} (verify dates)")
+            verify_url  = (f"https://www.nseindia.com/get-quotes/equity?"
+                           f"symbol={symbol}&tab=corp_info")
+            urgent      = days_left <= URGENT_DAYS      # closing soon (estimate)
+            missed      = False                          # open, not a missed action
+        else:
+            days_left = (record_date - today).days
+            if days_left < -LOOKBACK_DAYS or days_left > WINDOW_DAYS:
+                continue
+            disp_date = record_date.strftime("%d %b %Y")
+            urgent    = 0 <= days_left <= URGENT_DAYS
+            missed    = days_left < 0
 
         name = our_isins.get(isin, isin_symbol_map.get(isin, {}).get("name", "Unknown"))
 
         matches.append({
-            "isin":      isin,
-            "name":      name,
-            "symbol":    symbol or isin_symbol_map.get(isin, {}).get("symbol", "-"),
-            "ca_type":   ca_type,
-            "subject":   subject,
-            "key_date":  key_date.strftime("%d %b %Y"),
-            "days_left": days_left,
-            "urgent":    0 <= days_left <= URGENT_DAYS,
-            "missed":    days_left < 0,
+            "isin":       isin,
+            "name":       name,
+            "symbol":     symbol or isin_symbol_map.get(isin, {}).get("symbol", "-"),
+            "ca_type":    ca_type,
+            "subject":    subject,
+            "key_date":   disp_date,
+            "days_left":  days_left,
+            "urgent":     urgent,
+            "missed":     missed,
+            "verify_url": verify_url,
         })
 
     matches.sort(key=lambda x: x["days_left"])
@@ -246,8 +279,10 @@ def main():
     # Build ISIN → NSE symbol map
     isin_symbol_map = build_isin_symbol_map()
 
-    # Date window — look back for missed actions too
-    from_dt = today - timedelta(days=LOOKBACK_DAYS)
+    # Date window — look back far enough that a rights issue whose record date
+    # has already passed (but whose subscription window is still open) is still
+    # returned by NSE. Non-rights actions are re-trimmed to LOOKBACK_DAYS in filter_ca.
+    from_dt = today - timedelta(days=RIGHTS_FETCH_LOOKBACK)
     to_dt   = today + timedelta(days=WINDOW_DAYS)
 
     # Fetch CAs — NSE first, BSE fallback
