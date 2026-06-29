@@ -160,22 +160,32 @@ def filter_ca(ca_list, our_isins, isin_symbol_map):
     today   = datetime.today().date()
     matches = []
 
+    # Reverse map: NSE symbol -> our canonical ISIN (from the equity master).
+    # Lets us match holdings even when NSE files a CA under a legacy ISIN
+    # (e.g. post stock-split companies like Kajaria: feed uses old INE217B01028
+    # while the current/traded ISIN is INE217B01036).
+    our_symbols = {
+        v["symbol"]: i
+        for i, v in isin_symbol_map.items()
+        if i in our_isins and v.get("symbol")
+    }
+
     for item in ca_list:
         # --- NSE record fields ---
         symbol  = (item.get("symbol") or item.get("Symbol") or "").strip().upper()
         subject = (item.get("subject") or item.get("purpose") or item.get("Remarks") or "").strip()
         ex_raw  = item.get("exDate") or item.get("ExDate") or item.get("ex_date") or ""
-        rec_raw = item.get("recordDate") or item.get("RecordDate") or item.get("record_date") or ""
+        rec_raw = (item.get("recDate") or item.get("recordDate") or
+                   item.get("RecordDate") or item.get("record_date") or "")
         isin    = (item.get("isin") or item.get("ISIN") or "").strip()
 
-        # Try to get ISIN from symbol map if not in record
-        if not isin and symbol:
-            for k, v in isin_symbol_map.items():
-                if v.get("symbol") == symbol:
-                    isin = k
-                    break
-
-        if isin not in our_isins:
+        # Match by ISIN first; fall back to symbol (handles legacy/changed ISINs
+        # in NSE's CA feed). Use our canonical ISIN downstream either way.
+        if isin in our_isins:
+            pass
+        elif symbol in our_symbols:
+            isin = our_symbols[symbol]
+        else:
             continue
 
         # Filter by CA type
