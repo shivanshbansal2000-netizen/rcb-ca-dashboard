@@ -51,7 +51,7 @@
     <p>671 ISINs monitored &nbsp;|&nbsp; Corporate Actions + News & Events</p>
   </div>
   <div class="updated">
-    Last updated<br><strong>19 Jul 2026 06:11</strong><br><br>
+    Last updated<br><strong>20 Jul 2026 06:29</strong><br><br>
     <button class="refresh-btn" onclick="location.reload()">Refresh</button>
   </div>
 </div>
@@ -122,11 +122,11 @@
     <div class="label">MEDIUM Impact</div>
   </div>
   <div class="impact-card low" onclick="filterNews('LOW')">
-    <div class="count" style="color:#0D6EFD;">1</div>
+    <div class="count" style="color:#0D6EFD;">0</div>
     <div class="label">LOW Impact</div>
   </div>
   <div class="impact-card" style="border-left:4px solid #198754;cursor:default;">
-    <div class="count" style="color:#198754;">1</div>
+    <div class="count" style="color:#198754;">0</div>
     <div class="label">Total Items</div>
   </div>
 </div>
@@ -134,7 +134,7 @@
 <div class="section" style="margin-top:8px;">
   <div class="section-header">
     <h2>News &amp; Events</h2>
-    <span style="font-size:12px;color:#888;">Last 48 hours &nbsp;|&nbsp; 1 items</span>
+    <span style="font-size:12px;color:#888;">Last 48 hours &nbsp;|&nbsp; 0 items</span>
   </div>
   <div class="search-bar">
     <input type="text" id="newsSearch" placeholder="Search headlines, sectors, categories..." onkeyup="filterNewsTable()">
@@ -150,16 +150,7 @@
     <button onclick="filterNewsCat('Sector News')"      style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Sector News</button>
     <button onclick="filterNewsCat('Macro')"            style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Macro</button>
   </div>
-  <table><thead><tr><th>#</th><th>Date</th><th>Headline</th><th>Category</th><th>Company / Sector</th><th>Holdings Affected</th><th>Impact</th></tr></thead><tbody id="newsTableBody">
-            <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">1</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">17/07/2026 19:05</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNM0RncmE2YmJoVGZvMmxXVWFYMXRhelZjQk5iVFpZbjAxbFBWbjExRktXT2FGNDd5QVlRV2F2UWRYTXhZZndqSzlVU3BRNzhaV1pRbENrN3AxRjY1QlBRRDJmNDhGZUdlU1FJeXpPc19WbXNDZHE3S0Z1VkdrdGlYSDYxWTRRX0IxQWtzNUN6SVhQRktXakxmd2piT0VqdzNndjhGNlFnT19wU201NWNOQzNERGJ5eTZTRkhIRTJ6ZzdjazA?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Jio Financial Services shares rally 6% after stellar Q1 results. Buy, sell or hold the stock? - IndiaIPO</a></td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Financial Services</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">14 holdings</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;">LOW</span></td>
-            </tr></tbody></table>
+  <div style="padding:40px;text-align:center;color:#888;font-size:14px;">No news data yet. Run <code>fetch_news.py</code> to populate.</div>
 </div>
 
 </div><!-- /tab-news -->
