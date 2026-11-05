@@ -51,14 +51,14 @@
     <p>671 ISINs monitored &nbsp;|&nbsp; Corporate Actions + News & Events</p>
   </div>
   <div class="updated">
-    Last updated<br><strong>03 Nov 2026 11:07</strong><br><br>
+    Last updated<br><strong>05 Nov 2026 11:15</strong><br><br>
     <button class="refresh-btn" onclick="location.reload()">Refresh</button>
   </div>
 </div>
 
 <div class="tab-nav">
   <button class="tab-btn active" id="btn-ca" onclick="switchTab('ca', this)">
-    Corporate Actions &nbsp;<span style="background:rgba(255,255,255,0.25);border-radius:10px;padding:1px 7px;font-size:10px;">26</span>
+    Corporate Actions &nbsp;<span style="background:rgba(255,255,255,0.25);border-radius:10px;padding:1px 7px;font-size:10px;">32</span>
   </button>
   <button class="tab-btn" id="btn-news" onclick="switchTab('news', this)">
     News &amp; Events
@@ -74,11 +74,11 @@
     <div class="lbl">Urgent (within 10 days)</div>
   </div>
   <div class="stat-card" style="border-left-color:#DC3545;background:#FFF5F5;">
-    <div class="val" style="color:#DC3545;">13</div>
+    <div class="val" style="color:#DC3545;">19</div>
     <div class="lbl">Recently Missed (last 14 days)</div>
   </div>
   <div class="stat-card" style="border-left-color:#0D6EFD;">
-    <div class="val">26</div>
+    <div class="val">32</div>
     <div class="lbl">Total Actions</div>
   </div>
   <div class="stat-card" style="border-left-color:#198754;">
@@ -86,7 +86,7 @@
     <div class="lbl">ISINs Monitored</div>
   </div>
   <div class="stat-card" style="border-left-color:#6F42C1;">
-    <div class="val">1</div>
+    <div class="val">2</div>
     <div class="lbl">Action Types</div>
   </div>
 </div>
@@ -94,7 +94,7 @@
 <div class="section">
   <div class="section-header">
     <h2>All Corporate Actions</h2>
-    <span style="font-size:12px;color:#888;">26 records</span>
+    <span style="font-size:12px;color:#888;">32 records</span>
   </div>
   <div class="search-bar">
     <input type="text" id="caSearch" placeholder="Search by stock name, ISIN, or action type..." onkeyup="filterCaTable()">
@@ -102,188 +102,188 @@
   <div class="filters">
     <span>Filter:</span>
     <button onclick="filterCa('ALL')" style="margin:3px;padding:5px 12px;border:1px solid #1F3864;border-radius:20px;background:#1F3864;color:white;cursor:pointer;font-size:12px;">All</button>
-    <button onclick="filterCa('Interim Dividend')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Interim Dividend</button>
+    <button onclick="filterCa('Buyback')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Buyback</button><button onclick="filterCa('Interim Dividend')" style="margin:3px;padding:5px 12px;border:1px solid #ddd;border-radius:20px;background:#fff;cursor:pointer;font-size:12px;">Interim Dividend</button>
   </div>
   <table><thead><tr><th>#</th><th>Stock Name</th><th>ISIN</th><th>Action</th><th>Key Date</th><th>Days Left</th><th>Details</th></tr></thead><tbody id="caTableBody">
             <tr style="background:#FFE8E8">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">1</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">MANGALORE REFINERY AND</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE103A01014</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">21 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">13d ago</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 3 Per Share</td>
-            </tr>
-            <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">2</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">LTIMINDTREE LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE214T01019</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">23 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">11d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">13d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 25 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">3</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">2</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">OBEROI REALTY LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE093I01010</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">23 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">11d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">13d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 2 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">4</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">3</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">TECH MAHINDRA LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE669C01036</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">23 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">11d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">13d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs  15 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">5</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">4</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">HDB FINANCIAL SERVICES</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE756I01012</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">23 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">11d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">13d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 2 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">6</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">5</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">BHANSALI ENGG POLYMERS LTD</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE922A01025</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">24 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">10d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">12d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Re 1 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">7</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">6</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">L&T TECHNOLOGY SERVICES</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE010V01017</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">27 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">7d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">9d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 20 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">8</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">7</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">KAJARIA CERAMICS LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE217B01036</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">29 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">5d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">7d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 12 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">9</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">8</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">THE SUPREME INDUSTRIES</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE195A01028</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">30 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">4d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">6d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 12 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">10</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">9</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">DALMIA BHARAT LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE00R701025</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">30 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">4d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">6d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 4 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">11</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">10</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">DCM SHRIRAM LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE499A01024</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">30 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">4d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">6d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 4 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">12</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">11</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">REC LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE020B01018</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">30 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">4d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">6d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 3.50 Per Share</td>
             </tr>
             <tr style="background:#FFE8E8">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">13</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">12</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">CHENNAI PETROLEUM</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE178A01016</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">30 Oct 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">4d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">6d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 25 Per Share</td>
             </tr>
-            <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">14</td>
+            <tr style="background:#FFE8E8">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">13</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">MAZAGON DOCK SHIPBUILDERS</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE249Z01020</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">03 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">0d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">2d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 5 Per Share</td>
             </tr>
-            <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">15</td>
+            <tr style="background:#FFE8E8">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">14</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">INFOSYS LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE009A01021</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">03 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">0d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">2d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 26 Per Share</td>
             </tr>
-            <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">16</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">GODREJ CONSUMER PRODUCTS</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE102D01028</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 5 Per Share</td>
-            </tr>
-            <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">17</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">COAL INDIA LTD</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE522F01014</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 10.25 Per Share</td>
-            </tr>
-            <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">18</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">ASIAN PAINTS LIMITED</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE021A01026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 5.75 Per Share</td>
-            </tr>
-            <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">19</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">VAIBHAV GLOBAL LIMITED</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE884A01027</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 1.50 Per Share</td>
-            </tr>
-            <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">20</td>
+            <tr style="background:#FFE8E8">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">15</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">SYMPHONY LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE225D01027</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">1d ago</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 2 Per Share</td>
+            </tr>
+            <tr style="background:#FFE8E8">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">16</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">VAIBHAV GLOBAL LIMITED</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE884A01027</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">1d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 1.50 Per Share</td>
+            </tr>
+            <tr style="background:#FFE8E8">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">17</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">ASIAN PAINTS LIMITED</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE021A01026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">1d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 5.75 Per Share</td>
+            </tr>
+            <tr style="background:#FFE8E8">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">18</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">COAL INDIA LTD</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE522F01014</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">1d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 10.25 Per Share</td>
+            </tr>
+            <tr style="background:#FFE8E8">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">19</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">GODREJ CONSUMER PRODUCTS</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE102D01028</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">04 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#888;">1d ago</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 5 Per Share</td>
+            </tr>
+            <tr style="background:#FFF8E1">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">20</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">SANOFI INDIA LIMITED</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE058A01010</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">05 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">0d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 75 Per Share</td>
             </tr>
             <tr style="background:#FFF8E1">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">21</td>
@@ -291,53 +291,107 @@
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE200M01039</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">05 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">2d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">0d</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Re 0.50 Per Share</td>
             </tr>
             <tr style="background:#FFF8E1">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">22</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">SANOFI INDIA LIMITED</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE058A01010</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">MOIL LIMITED</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE490G01020</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">05 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">2d</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 75 Per Share</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">06 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 2.20 Per Share</td>
             </tr>
             <tr style="background:#FFF8E1">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">23</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">PETRONET LNG LIMITED</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE347G01014</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">06 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 7 Per Share</td>
+            </tr>
+            <tr style="background:#FFF8E1">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">24</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">SUNDRAM FASTENERS LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE387A01021</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">06 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">3d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 4.05 Per Share</td>
             </tr>
             <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">24</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">25</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">LAURUS LABS LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE947Q01028</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">06 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">3d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Re 1 Per Share</td>
             </tr>
             <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">25</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">26</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">NTPC LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE733E01010</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">06 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">3d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">1d</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 3 Per Share</td>
             </tr>
             <tr style="background:#FFF8E1">
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">26</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">27</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">OSWAL AGRO MILLS LIMITED</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE142A01012</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">10 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">5d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Re 0.50 Per Share</td>
+            </tr>
+            <tr style="background:#FFF8E1">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">28</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">DABUR INDIA LIMITED</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE016A01026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">10 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">5d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 3.50 Per Share</td>
+            </tr>
+            <tr style="background:#FFF8E1">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">29</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">CHAMBAL FERTILISERS AND</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE085A01013</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">11 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">6d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 5 Per Share</td>
+            </tr>
+            <tr style="background:#FFF8E1">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">30</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">INDIAN METALS AND FERRO</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE919H01018</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">12 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">7d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 5 Per Share</td>
+            </tr>
+            <tr style="background:#FFF8E1">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">31</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">HINDUSTAN UNILEVER LIMITED</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE030A01027</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Interim Dividend</span></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">12 Nov 2026</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">9d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">7d</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Interim Dividend - Rs 19 Per Share</td>
+            </tr>
+            <tr style="background:#FFF8E1">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">32</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:600;">FDC LIMITED</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;font-family:monospace;">INE258B01022</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#FFF3CD;color:#FD7E14;border:1px solid #FD7E14;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:600;">Buyback</span></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;">13 Nov 2026</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;font-weight:700;color:#DC3545;">8d</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#666;">Buy Back</td>
             </tr></tbody></table>
 </div>
 
@@ -356,11 +410,11 @@
     <div class="label">MEDIUM Impact</div>
   </div>
   <div class="impact-card low" onclick="filterNews('LOW')">
-    <div class="count" style="color:#0D6EFD;">27</div>
+    <div class="count" style="color:#0D6EFD;">30</div>
     <div class="label">LOW Impact</div>
   </div>
   <div class="impact-card" style="border-left:4px solid #198754;cursor:default;">
-    <div class="count" style="color:#198754;">27</div>
+    <div class="count" style="color:#198754;">30</div>
     <div class="label">Total Items</div>
   </div>
 </div>
@@ -368,7 +422,7 @@
 <div class="section" style="margin-top:8px;">
   <div class="section-header">
     <h2>News &amp; Events</h2>
-    <span style="font-size:12px;color:#888;">Last 48 hours &nbsp;|&nbsp; 27 items</span>
+    <span style="font-size:12px;color:#888;">Last 48 hours &nbsp;|&nbsp; 30 items</span>
   </div>
   <div class="search-bar">
     <input type="text" id="newsSearch" placeholder="Search headlines, sectors, categories..." onkeyup="filterNewsTable()">
@@ -387,8 +441,8 @@
   <table><thead><tr><th>#</th><th>Date</th><th>Headline</th><th>Category</th><th>Company / Sector</th><th>Holdings Affected</th><th>Impact</th></tr></thead><tbody id="newsTableBody">
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">1</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 11:16</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSGdYVnpSZjZtTE9nSV92b3NpaFNnbUduRHRUdGhpdWRoTldfZVh4eUdtdHAyNmQ1SFhkMm5JR0pJMXZWV05xUG9kbVliaXVsSjJiVUlqX1R0QTZEZHNfOTNJR21va1lCM0pzQ0Y2T1VqRlJSQmgzU2VZeWttaEdXaVJEc3c0UUlaYUstQW1PUkdCQUVWZmM0Y3dVZ1Z6REZjUEJDYlZ3ZjBNTF82XzdZUi1ud3pXWUktdkRqQ09jNlJ1U2tOdGQ0ZWF0Umk3RUdCZ2fSAdcBQVVfeXFMTlpTUG92SHpkMmZDc1VVLTFvRHpOSEM1VU9VVloxeEo4ZjRhanR0OUVSS1JyZEUxR3pKUHF6TmdZdFU4VzFhbXJyLTM4UHJFaTZoa0hJS0xXdklFOUlpN3hmaHVFN1dtM2dQRnVrTEVqZlF3c2x3QXdjVVQwTUhmd1JJRlpEcFRnSE5CTEpVZXR0QTFzUkVyU2tBQzBUbzRJenZybFhVWEcxY2JoQlVlRDJoSzlFSm4tVUpzRGZuczlPc0JHTGwwUFJWM09vNmMzQnQtRlNTc3c?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Nifty Capital Markets rallies 2%; Motilal Oswal, Angel One surge up to 7% - Business Standard</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 10:38</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMirgJBVV95cUxOeHFKYmJIZmg1VzkyaUVwSXkyZE9FemowSDE3NzFTUUlJS0xIb1h3MThvcE5nVllOa0JwalNSVHEwdEVxdTJnRVVCREtPaS1aVHBRTHh5UnRuRVd2eGlDdlEtWHFacTNWcG5rZjlDZ05COEcyelE0UmFIZDh3TGVrYzEwMFExTTY2bGw4cXBYTnNIMksyVjEyYlZDdHZZX2VJamY3dGpkNDlqLWZaeTF5Z3k5eW0tMW0zUDRucFZJNDBCNWdyOVJmN1ozMFBpbERTVnZXNHlFdEFzRmRJdWllX2lmVnAtZkJOeElZbWF1R0xDV0dMenVGVG01VG1fY0NseVQxSkd3bGtoeGZPWk14UTl0dW1TMmVacUN6US1sbHlkdXJBUzJhUjhTb3VQQQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Cummins India Share Price Today Down 10% - Equitymaster</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Capital Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">17 holdings</td>
@@ -396,8 +450,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">2</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 13:10</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOb3NjcTNBcHkxNnRaaHFKcV9tc2pQOFRMbXlWSjhzUFpNSEdkWEo3TWplbHVQcU1FYW1WalFxSDR3UE1HYThmVjZlaENwOWhVY3NKQXRfck5sMncybHVWRVREeUJOb2IxWnNpREUycDJFVERIMTNCWElpUGVySXRudDhfVkFSNUFRdThocUNlNDBwZnhRYlBGRnVMbDdmNnJKUE1oV3lsN19OR3c5cWJ3TkZDaFZGYTB3UGJ6a0FjTF9uNnlYOWpzOE9VNNIB0AFBVV95cUxPcnhGdUFmTkZMRkhhdDVfU28zMEtUVjRJVEkwdDRBdnU2a2RkMElBR3l6OWszd1FpdDYydVhZcmZDU2RsRXZETUZ4LWl4cFhLMlBZdDVXVkc1UVVZR2hQc2pnWE81VS1hVzRVdG1WUThzVmVEQnRYQ09rYk1yYzMyd2ltYlZjNmpXLUNIbnZsLWlpZW1oZk1kOC15cEhVQ1pBQmhhMkRpRDJrWEg5ODAwVnpXcmFoNHl2OTEtVjlVaUhpZWNPSHdKUDBXSW9SbWhD?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">NSE shares get 'Buy' ahead of Q2 results today; here's price targets - Business Today</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 11:34</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxNZ3FkVHBteHlxem9PaGtNd2xzV3BiUFQ0QjRJYWZjb2NhQS1OczluUlE2ZklZTEdXSGlwT1dEUmtkMFBhR1NNRW9RLVZEWURxdU5KX01jNkFKdlR2bTdvU3lxNzh5eUl3ajRFaHVBRWs3WGlTRnR5TE9Ea21qaExpWnAtd1hFR2hSRDc5Wkp0TjFQWGVNQVk1OXlxVXkwVkd3aGJpWWYzSXpMdHhFaGNqcVRvRlJTaE11aUp0THhCak5PVWZZVVU3RG1sUUJ5UdIB0wFBVV95cUxNeVhZRGw3clJ3bFVOVU1tNXQ2WWhzZVpHOFFiczFnSjlZWHFsbXRHZWNMVFhUOGtQNlhfdHFuZ0I1RGY5OEtrUUdZd2RIVV9yb2ZDcjZjUnY2MEF4eTFIcW16U2NxUk9NMlZ2NGU3WHhyZ1RKdGw1S2Y3ZlNLU2dHRjBUS2tkX1NRY0JMUDU5aDlHYXNQUzZDeWNKTVJkd0J3RW1odWJSc3UzYVZPbVZ4cjJWTnpGMmVUR2tRUVlVeVZORko0eHpheVQ2eFFSVlB2UTFJ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Capital Markets index soars 4%; MOFSL, Groww, 360 ONE, BSE zoom up to 7% - Business Standard</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Capital Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">17 holdings</td>
@@ -405,8 +459,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">3</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 12:14</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiiwJBVV95cUxPdm5NUC15UnNzRHEtUFFHeWhMczY1U2RLOHh4LXVfdEZreEpUR0k0aGtubVJOOEpULS1YdlZ1a1Y2QTc3ZDBJU2htMGtETHBmSEM3US1rUDdwQUxxT1p6b25vQ01hN3FiYnhwX1p3OUJKczMtdmY4ckhudDBLUDlfVXR1MHR0UlNpSHBvbXExSHBLVllydzg1d1RqM2E4TEh5MVVLODFHR0xkMTlLMzZ1SFpYT3ZobXQ4MnU1LXZFX2hkMnk5dGxsSGdSV1NmdklPZ2RISnFQUng4TEg4SU5RV3Y2ZTkzNFhDU0d5a250QzlIdUd5MGxQUkxpb1FnTnpQSW4tNXdkelJuNG_SAZACQVVfeXFMTVhzRG1xb3RBOWduekI3cUxmckI1QWdVZVkzdWlZQ0NFbUxueDVjaUpzZC16VUwwa2VGV21FWWVyLXIwdVlkVlB6blpKN0I1TUhVZmwwMUFIVDMxdEhKRTd4YUFSY3NDS2FmNExwY1hkVFhMQXZycHl5X2tvazBSVDFOcnFrRXBrTEVvVHJlb2hJc2ozMURfQ3h0UXA5T0gySkMwdVZiM0JWUHFTemRTOEpXcnB3X0JtUk5LcnVjRVBIV1Z5elR3SDBxV2hoc1o1QjFINTR5Z3JVcmRpVHFhWXpPdjBjbDlFV2NkVzR3Qm1Hel9LdU9CamdPRzEza1NWbkNILXJYQklldHFzZmxieXk?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Diwali stock picks 2026: PL Capital recommends 10 stocks for Samvat 2083; Apollo Hospitals, DLF, Jindal... - M</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 16:13</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPNnpDWDgyTWhqcXdSWWxlYklxWFVEc3dqcEgxWkNCdjNVaWlYOTFTSUw3dWxiV3Jwd18zRjN6MHFWVUlXODNDOGlIcVB5U3VsVmVOcUUxSkpmYTJvR2huWHR3Vnp1RU84VVhUb0l0eWJhTDlSdXlEZk9sel8xbUF3ajBLeHdLdE1aNi1MMWhhZHJZVjFZbkszZ0FSb1QzbHFqcHpxaXFWNmJ5QkXSAbABQVVfeXFMUGFrY1VBMDZWRTFyZmJOcHJTNVlJdlljSmdZRWczYVZ0ZEh5N0RNaWdYZERJTmZOWTUzY2NtYnhqb0U1LURCZFFpaUFnRmpFSjBDMnBoSGVtckdPMEV6NS1pR2wzSzA2cEhFSGYwS3lPam1tSFhibFdtN1VncXR5QWFJYmxzcmowQUJ3MUUxZ25SNHpQZ2F2TlNoVk4tRHlFbGxBYmNoQzNfV2xwbm5Sc0Y?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">NSE chief calls for simpler products to steer retail investors towards investment - CNBC TV18</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Capital Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">17 holdings</td>
@@ -414,8 +468,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">4</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 09:48</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxON3ZWMUVlSUJqVV9DRzlnaFdnNi04TTc2c1BBcWE3NFhocUxHdXdxMEl6cDZLTGtmazJxVVdLYVNvTHBhUjY0NWZYUnZqajRqYzFCczBJNFBRWWtUVThJR2FxaWNWYVN4Z0xRbmVZUTBfWUxhU1FQUUY5dVpXaFBqTEJibDhtM3hOTmlPaHljV0FFTWRON0RQZVpLclM3QUZCa0FWN1ZFTjZxZEhjLU9kNHVoRXlydWdjQ2RUZUJncGRvbmp6Z2Z5b2VPTUE5RklmTVV6YVhIa2lxTWRTQnQ5dmx3c0NOOGM?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">EAAA India Alternatives shares list at 0.6% premium on NSE; here's how much investors made per lot - Upstox</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 15:23</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE9JaURRNnA0WmlzUTdrZThOMm1VczU1RXFIYjJ5OVdHZjFZWFRCUDlOYmFXVHRBOHVFV0ZLbXZ5RjFtX3k5TXA3RE1fY0FYVVduWnJMYkRldHhFVllMV1pSanJpc0ZYVlFxZmp0M3BmUUxDUHMzTVZXSkVpUQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Capital Goods Stocks to Watch This Diwali: Orders & Execution - HDFC Sky</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Capital Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">17 holdings</td>
@@ -423,8 +477,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">5</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 10:18</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxNeDlDZ1RXODZaQXpGcFNLMlllenNlZDU2NlZUR1ZZajgzYTVWT1QzS0JhdC1OTTV3eEFpbm5hbkxJSTlEOFUzc3lleFdHQlNtZFFrN24ya2ZnWGp4V05uMmY1T0ExcG9zRFg3NGhKUUdVTW1PWDNMZkc3NFRwUTJHRXAzajl1amFPSDJ3ZnBvZDRoNDFMX1IyT29rd3ZuaVQyTVJzQkoxME5KUXdwX3VFXw?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Wall Street Rushes In With Bullish Calls on India’s Top Bourse - Bloomberg</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 17:38</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxOS2N6ZmVfTmRxSWQ0cmpUWkw3Z2hQbFgxLXI5WVNFVG0xU2k0SmhEM1BTc1c3VUx2QWczdk5HV1dSc2ZJWVJLbXdMVzhqd2xSajFOYnBQZkxkNG9QblFyaUFUa2RrR29uaUE3cXNtb3NtM0l0RUtXN2pOQlREWml4X3FrYzJPdW5tMFpCRmNBRXk2RjhHOUxEWW04NkhzcnVpeEpQY3pKNzlhR2V3S3pDLXNBQWhhZ0lQSEdESEZVSDVPM1FORXFZNtIB1gFBVV95cUxONWVvTDNYMlZnT3h6aXN2bUtkbzVheXVUSldocTh0X21ocWZqRlBlcURXcGVOVVN5cTVMMG9JOUJYdnJBYUdQaXBBQ0RxNTYybWxZVWVyZFdZaDBjMjVHZXYwSl9GY0RYUWlPZ2tkTy1KZkRzOVU2VFk3bHZWTTVOZU5RMEc4T0VlMUVVZU1KQXQwcXVyVDI1LUEtZWIwTU11RDkwWjc3cjlLXzlYVk1SUHVBSEx4MVNBeDhsbXh4VDgxSDhWcnlyRDJBQWpGNEUweDZRU1ln?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Indian markets defy mixed Asian cues, Sensex and Nifty extend winning streak - The New Indian Express</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Capital Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">17 holdings</td>
@@ -432,8 +486,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">6</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 13:12</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxOZ1ZOVWV3YkxqNWlvbExET2UxVGRCN0VfZFZWSjctRlJwa29EdXFBOVlqU3h1QlJpZWlGMm5NYTM3ZWJ5T3JjOXhEandvSWF3VjdQUU1sZmxXSWxld1c0SzQ4TTJlSUtvRVo4ZXRhcGU1ZHFiU3JwZ2ZiVVB6OF9EcHpXODhXLWdoQmFBTjdPQS1NT0pPN0ZPWUU5QWVHU0xHUVV5Q0xoWDk0bDVlRW80QXZPTktJM3FZMW1ydjB0M3M1NHVBODBlb3diRFVfakVwSTRUTExnZm_SAd4BQVVfeXFMT0Q2RkJDalEtWXN6bHBMNVN6dXFpSU1ON2pXVVZPQjJYZWVYYV94ZmM4Qldmejg1ci0tblpJSjEzWDhOZTVmMkVBQ1dLTVdGa1ZVSTdHeDBsSkVEOWR2dHdqbE5yY043aVN3RDk2cFJSczJOcWFwVFUwOUlydGJvMV84OXRqU0ljV0dpNmZ6bGQxcm5PV0NKU0trSmVxU2FQOHVaalVJbTVFdmhHVmFHTEtOa1BLczc5QlRWWHdqem5ETkQxaV9QWFNhYjNXM3hHRjhaY01MZUNwa0VlQzVB?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">India's NSE International Exchange expands trading to 23-1/2-hours - bfsi.economictimes.indiatimes.com</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 15:54</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxPZDNtNklfbXozSW5uMVB1a21Yc2Q3eHlNc0lfOEE0SVMxRXFEUFRFb19MZ0R5NGNOUTQ1bjBoWENqX0Zwb1g3OHljN2loM3FuOXFqaEowMHhIMkloVGNuRkcwR1ZwVmFHWTFuZXR1MzRyV3VndkdTdm9tbmtXd1o5X05zRjB0Z2VwQlZtQ2dNSUlVMlZmX25lOEVCRUpiSGRka2p6dV9Pa2QyeWNlTFkxanA0ZG11dmh5alVlbEVlY0NSQzFTYWRobUFDMlR0TTNNYkFISndQY1lzVFczODAySVFlZ2EwVHk2QnJBRnlDN0hka0dFQmc4Rzl30gH_AUFVX3lxTE1sdWJnN1hJZEsxOGZpZndac0FINU9aYVNISXRRQVJJcmQ3Q0ZlWVlrMW1PeUlocUVOMjJhMkF2LXRFaVFHNk5JcGswdE9wOW5CNVR5clI2bVVwR3ROZG1jNnRxWmdKWjFkdG4yVlZSNDZWck9ibkdyczJMRS0wUS1NWWpZM0hyanBOZTVSQzdaVUlNMnkwd3BZOVdHVGZnQ1B3OU9USE1UZU44WDkxazE1azQzcEZUejJrUUM0TnVFOVdEUWpRelNpMGpmV254dS0tV2E5eW0yMmpuMGc2U0Vxa3BHazBUdU9YTnM0ZjhEN20yZTQ3amlMajk3YlNOZw?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Why did market rally today? Sensex zooms 2,009 pts, Nifty above 24,500. Trump’s setback, 6 other factors b - T</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Financial Services</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">14 holdings</td>
@@ -441,8 +495,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">7</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 09:25</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOb0s5Zm1qRkwtTHROMFlTWkVCSlZnNS1lSlJxazJrRnJQRG9MZFNKV0hXQkNuSUhWUk5zMHNYVmNBQ3JWSkx5S2lLWXVwS2RqaS1mSWJYbjhHRFJtZDE0cFdzMGxkcWhGSUFpODVsUXlkTzJFbFJXRFloV01XTWJSSmxIa2lDcFhJa3FDNUpWb3UwcHZ1cDN4em1ZdVRwMEZvTHc4Tg?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">EAAA INDIA ALTERNATIVES LTD. Stock/Share price , NSE/BSE Forecast News and Live Quotes - Equitymaster</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 09:45</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxQLXBZSDBZQ0NLS1lOTVA5NDBxa29udzhxTFJXd1VjamlZT1c4RDhHVzc3b3VSMGZod2E5SktRQmowdm5iZDJBYXZhRkppY0FTb1gzQUZQZTZMUXFNQ0l1QjQ4NktvLXczTmJBYXVrVnAtS1BMVXV6ZUlRYl85OHdzS2RpX3FXQXVCYXFjaEF5TjQwQmpiQlkwQUZRVFlvSS1SWGdXa2pDWHVhY2NQc2phWDNtYW84eFJERVNGUXNFRGZ3eUxtWDF3WEtvWlVDaFoyeUJSUVBHU01oXy1walNXaUtaU3gxSUk?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Bombay Coated and Special Steels shares list at 11% premium on NSE; here's how much investors made - Upstox</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Financial Services</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">14 holdings</td>
@@ -450,8 +504,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">8</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 08:33</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMingJBVV95cUxPaEZZWXFHSWc4RU9TNjdONnJqREQyQndNREdNbU1BcFYzZl81M2ctYWFOa2FNTjQ2VjZaV2g0RjIzX0Y5djFmQmo0dzYzMVZZb1o4OTZEOW1FMmNKOVo0bDJwSWxVdU4wb2R5eXFnNmgzZ1lPWVRpM2xSazVFY2pLTXRlX2RKa2lBRmhVbFZ2SGY2MnprMS1iWDNNZUM5Z1BKUHRoazNHUjdsQUpIWmpsM2JvWFRzT1RQbHZrUldjSjRtMTNPaVp2Qnk5WDhFc3JhbWpKTk5CMVc0YU9hNG4zd2VxR3pCeVYzSF9BaG53b1RSWC1VUTA4ejhvdmpKVnhmSHlycElIWWV6MDBqNW5HNDVwQ3NSRmtST1VMbGNB?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Q2 results, Nov 3: SBI, NSE, Bajaj Finserv, Solar Industries, Lupin, MCX, Graphite India, Gujarat Fluorochemic</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 12:22</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNc0JKcV9UenBNWTFsSFZGc0lrVDdLTzZVYkt1cTFqM0pwRmZLUVhIaFRNQzBxX2lIb2RHV1VqZzZWVTdCVEJrYnZKWmM0MllxMlFhanhwLWJucnN2cEJXQlU0YWdjM2xHM1o3VFBlenY0cVIzeTMxMzlwNzNnMEFUTGpxLTB1Y1pfRTdKRTdVQUdOMFkxMEh2aHRsWDhRWUFtNFU0X0F2eEU?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Thomas Cook (India) Limited Gets NSE No-Objection for Scheme - Multibagg AI</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Financial Services</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">14 holdings</td>
@@ -459,8 +513,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">9</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 15:08</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPangwUVJNeEdOYlZSdzl3aUE0YndWUHBLbG9PU194QUpyVGxOX3c1SDFiNkxJQklxQ2ZyVE9rbEFaM2g1VWJyOThDd0F0UkItcUs3dE1WLUc1QkhBc1JnOHBqQk51MHVRdjFkazRESlZsN0R3Z1pRUHpkMHhWdmNpRUViSy1TMjd5MUREcnFOVjRWWk9kUU0tNy10WmgwYWV5MnhWeGVLbkRjSHRoZGJTUHBLUEhpMTZnS0NBS0Y2MExmdW92Y0pfdy1tU3g?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">PTC India Financial Services (NSE:PFS) RTA Office Change - Kalkine India</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 12:30</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxOWVMwRHd4NDlIT1A3TV9tdWVYMzI0RTRVNGNQNXlaVldqYm1yWTJ6ZmEtSEFQdW9oYk5NYjNsbTAzU3lpdWxLcnNacFdoZVZ3TkM1V3ItaUJTNGw2UDhLc2Zhb2RVcDVBMHJTQnJGMnhkNEt6dnotTmF6TWh1THlDcEdianFZUXM4eHktY1BQd3VVMmVQbzRBcDhIeGtNTFRsS25iNVVPb0JnVFdmUnVsQkt5aTJteGJqQ3lQY3hSTU1VT1FvS1U3R0JQUDJsV3FadU1lMExoUDFkaHYzaWxQUzh6UnpvbGZ4OUExSA?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Sensex Jumps Over 1,500 Points, Nifty Rises 440 Points: Why is stock market rallying today? Key reasons explai</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Financial Services</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">14 holdings</td>
@@ -468,8 +522,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">10</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 13:39</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMihwJBVV95cUxObGJNaUFjUlV0UTRZb1FtX3RHME4wamJkZnB4eXkzeW5kWmIwXy1wSWN3YlU4VjdDUUVpT3ExX1ZteHRZXzhTNHpITDJiWDRQVW5qblhEYUhpME96TGx3Y0dBcUV0VVVCOG5NTE1Ia1NYRGQ1azFhZGNFYngwTkY4WDFFQm9kT0xnbktwaHFfSXl2RDVqME96RHNtclpRX3VVQlRUMlJiajI2ZkdGM0Iyd0ZLdzZiVU9xNWI3NUhaVXNXMUltQ0dEcTRUX0R5UjU5bkdCa3pvX0Z6eENfNWVFOWdrRlNwMl93a3lKV3otMjl4SkR3dXN0YW9kR3YwbDkzdGRTU2JzRdIBhwJBVV95cUxObGJNaUFjUlV0UTRZb1FtX3RHME4wamJkZnB4eXkzeW5kWmIwXy1wSWN3YlU4VjdDUUVpT3ExX1ZteHRZXzhTNHpITDJiWDRQVW5qblhEYUhpME96TGx3Y0dBcUV0VVVCOG5NTE1Ia1NYRGQ1azFhZGNFYngwTkY4WDFFQm9kT0xnbktwaHFfSXl2RDVqME96RHNtclpRX3VVQlRUMlJiajI2ZkdGM0Iyd0ZLdzZiVU9xNWI3NUhaVXNXMUltQ0dEcTRUX0R5UjU5bkdCa3pvX0Z6eENfNWVFOWdrRlNwMl93a3lKV3otMjl4SkR3dXN0YW9kR3YwbDkzdGRTU2JzRQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">NSE International Exchange begins 23.5-hour trading, extends market access across global time zones - The Econ</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 10:58</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxQMmN1cjdFeVYtQ1lkNmVIN2xDWE53azFuVi1mVWlrSklLWDFNcGdBZmM3QUs4dE85UWQ4cHlVMmJDeFZXWGljeDNiMlRFUTE3R2dpN3liWnYtclJsM0l6OWJRT1REVy05ZXliU0l3bUJzY2NXWS1NeTlTakJjSXlfMmdud193VDdFcWJGTEc1bFp0azkzVXV0T21n0gGnAUFVX3lxTE9PYjNlbEpGa0djTzl6R01Td2hVWEx2eF9xZVJuMnlrR0NiTXBjVUF1WW9HZ2pjaHFienBOYlNZNFgwdE5FdlhKTHFzWWpiSVJac19HSVFhQ2ZhaUVqal9zdnBuZmwxUzF0YmE4RlVfRTFSUTZxdmVXLUxGUU1tNUNsUXZEY211VFo4NkZka3BVNDZyN25Cem5GZ2luU0VKX0wycWx0V2NV?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Capital Market Stocks In Focus Amid Strong NSE, MCX Results, LTCG Cut Buzz - Outlook Money</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Financial Services</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">14 holdings</td>
@@ -477,8 +531,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">11</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 08:38</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxNQkZDaWNPaTc1aDlLMTJCMUlIczUzeXNkMjdYdHRCTnUyQzlEd1I4bWlyQUtVcEhqQkhJX1RpUHlnSTl5VDBjSTNnWHZGNk1Eb1ZLcW13d25rZ2R4MjJ3NTE0Y0xRVUREN2p6SUVJMzFtcVVLUER4S01SaG5TQWZVNEJVaWtCZ1ZpeVFaR2s2bzBYLUhHcGw4WUdOZS11WU16QlpyS1EtZ1VqVTdWcDV1QnhFbFpuWVBBV04yS3VKNWUxeExDdmNFMXZQWk9hblZqYTZfVk05am04c29LR1HSAd4BQVVfeXFMTUJGQ2ljT2k3NWg5SzEyQjFJSHM1M3lzZDI3WHR0Qk51MkM5RHdSOG1pckFLVXBIakJISV9UaVB5Z0k5eVQwY0kzZ1h2RjZNRG9WS3Ftd3dua2dkeDIydzUxNGNMUVVERDdqeklFSTMxbXFVS1BEeEtNUmhuU0FmVTRCVWlrQmdWaXlRWkdrNm8wWC1IR3BsOFlHTmUtdVlNekJacktRLWdValU3VnA1dUJ4RWxabllQQVdOMkt1SjVlMXhMQ3ZjRTF2UFpPYW5WamE2X1ZNOWptOHNvS0dR?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Nasdaq down 1% | Crude oil prices fall 7% on Monday | US Mid-terms in focus - Moneycontrol.com</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 08:50</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMihgJBVV95cUxPRDRNNy1OdFhJQ0owTTktWUpVWUpPWHlrTGk4SW1vSS1zRmg0aTM1RXhfYXJuYmE3enZId0lHdkIwcVBrVkhOZVYzQzF1Ny1LVVpxVl96Qk1PV2lQNHpSdW1HVnBybDdxSnlFaFVGNkVTN0YzWDB6QnFqVTJFUDhQVnlYZ3k5cnh4M3czbnRmaUJOX29TSUIxWUtwazRXLXY0ZGhHb2lKWVZWRVU0aWVScWZoRlRfeDVEcEMzZ1dYbDRIMldOOHNrS1c1Q1ZPdlVHYVA2dFFlMDQ0RXlvLUpkUzNRbE0wbldWMnJGUlFmdkpIakZRRW0xOFp5S1ZYOERvYU9NUnN3?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Vedanta, Hindustan Zinc, GMDC: Metal stocks in focus as Cabinet approves ₹2,814 crore critical mineral process</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Metals & Mining</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">8 holdings</td>
@@ -486,8 +540,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">12</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 07:29</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSHphWlNYRTc2YTNzQW83UUdLNkZjeHJxY054ZWgzVC1SSEplTlBXckhZYnlnSHpRVllPM1h6Qm94Wnk0QmQ0c3AwdXM0QkpUVUR4eEpLUVZ5UXVFVVloVFRZYlc1bC1tdnRZa01nc01GYldLMzVWbnBJOXI3Yk9BZ2V1Q0s1OFZ3Nlcyb1VaaGo1Q0Z5S2tmcHgtalJVbVlhWGNILWZtNDNBd9IBrwFBVV95cUxPSTJzdUpodEQwelAzTzRGQ2xLYk1MbjJxZ2w3eVlXQUNJT0tjcUtPdGZhdUFHdVhYUm00UzR4QnFlZDJiTUVRaFZFODcyUkQ5aU9ybEJuRk5FR1R6aGRyT0xnc3dXZHNBR0l6RmRLdU95Q1dRejZHZXdsS2N0UkZpZWs4N1N1ZHlHVXl1Sm1kNlR6LUxHbzNIeHMyMG9menFXZ0FjaVJaX3R4M24wUGlF?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Mint Ticker | A follow-up buying is critical - Livemint</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 14:46</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxQaTVSc2dfb2RGNmotMzc3ZlNxTEJfUVR2aTgtemxuRnJLSF9yMHVrZWh1TE9Od0NVRjZDTVZEMk5SNkZtUHp1ZjdEcEVUa19aakdQWHJVVEhoRXFvbVRORUhMMkpidHhtVmlqS2hLN19ONXBlc1hlWmE2VU9yTmp1cV85bTJXQTc1YnVyRS1maHYyc3pucHFJS0l1ZmpfMDdxd19LaXlKRVVnMWJjYlFGQWZmcDU?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">IMFA Q2 FY27 Results: Revenue Up 34.72%, Interim Dividend Declared - Kalkine India</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Metals & Mining</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">8 holdings</td>
@@ -495,8 +549,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">13</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 21:44</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxNeUhhYUVFMF94Sk9mYzVaYXNUX2RQYXRNR1RNMi1SRHVqUFBWVXM1cE4wRzI1THNyTGIyZUY5c2M4R244NG9iZ2Y1WDQ3VzF2S2wtR2NMblV0U3Jzb1ZHRHZvTjVnY1dFNk1ObmsxYWhyc0UtMHlNWEwzWGRZOWRwTUF5UTlOU0Joek45UEdvdGJ2RWFPdFY3T2xZYnFTREplemZKVnBHbVVlVEI2N3owLVhIMjdzRmRtejB0VUtnb3FoX2xkSUd2MjVwQWRua1BvQV9uQ1Z6QzlfSG9sYmfSAd4BQVVfeXFMTXlIYWFFRTBfeEpPZmM1WmFzVF9kUGF0TUdUTTItUkR1alBQVlVzNXBOMEcyNUxzckxiMmVGOXNjOEduODRvYmdmNVg0N1cxdktsLUdjTG5VdFNyc29WR0R2b041Z2NXRTZNTm5rMWFocnNFLTB5TVhMM1hkWTlkcE1BeVE5TlNCaHpOOVBHb3RidkVhT3RWN09sWWJxU0RKZXpmSlZwR21VZVRCNjd6MC1YSDI3c0ZkbXowdFVLZ29xaF9sZElHdjI1cEFkbmtQb0FfbkNWekM5X0hvbGJn?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Only 3% of Indians own equities, Jefferies sees a long structural runway ahead - Moneycontrol.com</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 14:13</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPVDN5aEVCLVZ5MjhJbnF5UlU1OFVUZFhiaEU2bm1ZWWlJTVc2aEd5Y3hXWjcwVW1OYS1rb2VjWmpQUUZLcU9ZcFZQOGliNWxDeHB2OVJJSURNVnJYQ2pFTmpndm5zaXFJZnV3ZkNTM0RYUjVUNnE2aktCRDZLVkJsZk9JR0oxVXE4WHE4OEN5M1dUWjFGb0RHN0FKdmNUSklJTDc2Y2hPV1NfcVRIRDR2eFVUYlpjdHR2TWFOVEFxcV8xS1ZZWDNWQm9iQQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">IMFA Board Meeting: Dividend, Results and Subsidiary Investment - Kalkine India</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Metals & Mining</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">8 holdings</td>
@@ -504,8 +558,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">14</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 14:57</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb3FVc2VQbmJHSENISnliTkFJMldKTDNaOGx5NGpIWkVfa3NvaUlHZnhteWNkS3hQc29OYTBJRVo3TXBTNHRtUlNZM05OTmdDbzZrbWRkazZtUGNyWmVlYURRdmI5U29tNVlKdm9UelY1bDUtbnBySEtWMVN2c1BhQWJYT19XMlA4bW5jMlVBb0xyNzc2RG9NQTdmV3ZmVVhNU3dNTzRJbUM4T1NyYmtyTEtua0pZUU1HNFRXSmVNUUNlZ1BHbjRjb1RVc2thTE9rbWfSAdcBQVVfeXFMTTFMSmVKYUpLSnR4dXBjeHRIWHFlV0h2NURPLThIVmdHdFdTVkd4SzdwS1BLUjIzak1lMXlRRnUxdExKRmpzeG1XV3l3VDQ3SExOYmtkT2tvRnFfck9qb0h5U0pHRF84QkJCVXotZXplSEoxZVlTaGJ4Z185c3Z4cnA0bGJTclpNT2RoOU5VTDlZZ1BZZXhacFZiSlUtVnYtNXlUWUNVVXktdnRBQy1rOWRBVnpJR1Y0bW9xRlZ5TkdyN2tZOXdWY0tQeVpCcjRzODZUM1piRHM?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Top 3 Indian Growth Stocks To Watch In November 2026 - Simply Wall St</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 17:49</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxQclVJd3d3T3JMd25TMDdyU0hRYzJuck1WU21UZG9DUEJPdHpXVWRUUXpOTjlac1VUdkNPRi1feHF2bzFoQTRLWUFrREZRSU1PNWlSU01iLS1fWlpHN24zNXpiT09OVWZOem9TRHBSZnJRLWY4dFlNY2dtcGxaUUNNNnV3MTBsYnMycmJEZld6QlE0Y3gybEpGMlRiMURfVzRPbE5oWGllMmdSNXhYOHpvVnFfOFBaRVNIVHZYS1FzdzR0RjNlUlFNclVjQ0pHN0JESERDWmhuMTU4SlBWLW5iWQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">J.G. Chemicals (NSE:JGCHEM) Appoints Two Independent Directors - Kalkine India</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Metals & Mining</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">8 holdings</td>
@@ -513,8 +567,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">15</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 21:14</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxPcjlQMmdFNmZmb2lueWwwZ3diUDdpeVVmM29RTmxqMjdtRWpQZ0JzTTN2b2NkU1pmU0hScVcyZTNIaEkwUk00WS1WTFQ3OFpWdndZSDhiR2RVT283aF9WQVlINTV1YUxPaVdOSTlnbFROa25JN3ZCNnFQeWRWQXhIOFVSNnliOWpmTHNnS0t3YkJ4QWM4RmNxREhxOW9jTHhQUjNQdkRvRmk4cUoyR2dzdDlfNGhfMTJfVmU4a21fU3ZqNW9IcGhrV24wWmJkUlU3X3ZTQlUtVGJ3cFlSWmV5NHNaSdIB4wFBVV95cUxPcjlQMmdFNmZmb2lueWwwZ3diUDdpeVVmM29RTmxqMjdtRWpQZ0JzTTN2b2NkU1pmU0hScVcyZTNIaEkwUk00WS1WTFQ3OFpWdndZSDhiR2RVT283aF9WQVlINTV1YUxPaVdOSTlnbFROa25JN3ZCNnFQeWRWQXhIOFVSNnliOWpmTHNnS0t3YkJ4QWM4RmNxREhxOW9jTHhQUjNQdkRvRmk4cUoyR2dzdDlfNGhfMTJfVmU4a21fU3ZqNW9IcGhrV24wWmJkUlU3X3ZTQlUtVGJ3cFlSWmV5NHNaSQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Carnelian, HDFC AMC, L&T acquire 2.9% stake in EAAA India Alternatives on debut day - Moneycontrol.com</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 04:51</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZ1RTcndzTnJVaFA1bWFXeW9Hc2NZRXlnWm5Ca1hJMjhSSXB4djYxcjc2QloyUHlUMzEydGdQWGRqMDVVTkRrNXRHV0hVNC1tdG5UMkRBQ3VoUzRYdkk2TjF4azhZYnFOeVJBMmw2YVZBSk8zam4xNklIdnlzV3doamhfTzd6dUdiOXItZVZXLVZubVd0cmZfN0ViaVVLdzNnVzFtYUFObjU1Zw?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">DAM Capital executes ₹30,500 crore Q2 deals and builds 19-IPO pipeline - Multibagg AI</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Metals & Mining</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">8 holdings</td>
@@ -522,8 +576,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">16</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 06:24</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxOczQ1dFVTOTloOGJ5ZURaYkNDbi1KQ0tTYTRkcm5fc0hXZTM1aXJpMlJ0SDFGVi1zeHk5bGJmLVVZZnJjWWZPSG82RnAxT0RKdlBScXRLSHhiMUJiTHRTbjF4NTBWYkdpM1JpMjVKZnJMOF85SlQwdmxacjN2MS1hMzhoTksyUlRmcG1rM2EtbHpYVlV2aXE5V0VkWnhTVnlPZ0RweXhPRFVPLUt3WHUwRHFOSVpSUXd2dUxkX0lBSENDZVgwVkQtM01Kemw1NzlMOTNEZVlvS3RRSmJRbzN5NDh6U2hGSE5BVkHSAe8BQVVfeXFMTUFRbElPT3hqZDRnaTFVZEpMOHo5d3JqajBkSXFoUjg2WWJBN0Q2NzNzN2RHT2JjX2tzT1lHLUxlNTN3YzgyRmc4NzJrLU1iWTNmZVcwb0ZoX2Mzd3UtZnJGMVNsWEE1Xy1VN0lWalZ0TjU2VlN0ZnhJYm44dXE0eHhpU1hIcWd5d0t5amZpQzFzWmhVRzB5YjkxdmFob2hBUVp1SV9LQzVicElqUFc0QUFyYmRTZ19HaGJVWV9qaG93b1BGaWljTjBxN3ZfaXhxQXhlZWxGZEp3SUxWWG5pTTR0dDVYSnBldFpSY1RZOU0?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Godrej Consumer Products Limited (NSE:GODREJCP) Just Reported, And Analysts Assigned A ₹1,060 Price Target - S</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 16:47</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTncwWHBUQ1NMblI3anQzSU1iZGJOTy05MGxGdnNoZy0xVUNHX1NGZlRVVVl1bUlZMWJOcE9CakZ1UzJjNUsxN2xFNG1LcnlQYmlzQXpRLUhrOXFiZm1nVE1vb3ljSVdGMDV2bGFLUGx2bi1SNEZsb3E0RWk3N3c5MUxFVFlJc1hvdDhjNmF2b1I4Zk9RNDY4b0w2UHlZOUZzbjN5OVNmS3l4YlFhOXNNQXNPa18zdzZBSGRUM2FuNzYyWTVXZkhKemcxTHA4ZkJTd0ZxdUpGTTZNNEpXbFE?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Top gainers and losers, Nov 3: BSE surges 5%, Nestle jumps 4%, Power Grid falls 3%; check list - Upstox</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Fast Moving Consumer Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -531,8 +585,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">17</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 18:45</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxPZFpGRE1tcFhUVEk3ZXBMZFhyYkNrZGV4TWNwTFJGenc4OENfbUd3N1dzdmx5X2tvcWFOREE3ZDRjWUpPSGZtX1NPYzUzRFo0M2wxZGl4VXFCa0ljTzh4dFk0WkpEY2oyeHZYSFlRclVmVm9ocDZ2UHRZRmNwakVDQjQyeXVNVjlIOFJvSVRkdWpKLXF5alp4MWhlRUc3bkRKZmRkTGgyQUJTWkdhX3Z0a0tHTEo4ajdDNUJDVFN6YThTY3REUThDVElJUW9TbGlMdHRpQVJkSjRyLUVlNF9QMWllTVBnd9IB6wFBVV95cUxNTDJMRjdvNjcxNy1INDB4SGJ5UFRZV1piVTBqVzZSQzZkVGEzN0Z4akhkdmtZaVlINW1Ic1l4aGktVlhSSENYQ2ZlUGZqdlNpQ0RCUDlhcU1fcHV3OTBiWmtYbkFUbHc5ZEgxY05pQmpicW1pUjVVSjBocjhiSnVGWkoxRVdlOHN5dXp4M2FyeTJ0ZTlTYUNORzBWZ1pzVzRaY3VIZFg4R2FRb000S3hjMEp1eWlWWE9RSWhVT2I2ZWRka3lOVUd6NE92a2lMenViQjR1SnJXaU5Gd3FUNTlzOUMzbC1LZ2FNdU5z?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">ITC Q2 net profit declines 18.7% as higher cigarette taxes hit earnings - Business Standard</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 17:46</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxONzdRY1dzU2MyLVVMLXlqOG1XSG85dExhZG1FenB4NHJqR3dCSElFcHJTemRoaktaeXdrR0x6dElqMlc0Q1o3aEcybHB2aWFOYkRhTldWSjNoaHFHVlhrNkdWV2t1bnVhOHN3UGdNT1laZ3pCR2tkTkRxLWZyc1lrd09fYjI?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Indian Stock Market Extends Winning Streak for Fifth Consecutive Session; Investors Gain Over Rs. 5.83 Lakh Cr</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Fast Moving Consumer Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -540,8 +594,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">18</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 12:34</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPQVgxcElYM2xtTDdNMFN4SURYSFRidVZHWVVacVdqSXp6U1JSQTdFeW00UEhvaEdKYnZfUUNIbFd4MF9xdE1aWXU1dllCWjAyeHZTRV9VbnlDWGpZUllybGpHQTZGdVRzY29rd19KOEwzMkd5ZV9remVZZk44bGhyZFNJbVNwLWc4ZWNQQnNQNWxsUVhBV1M0MF8yemE1b3NkRXpzR2FDcXZoM3pFU2FiLW1MYzM?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Stock Market Rally continues: Sensex jumps over 900 points, Nifty crosses 23,700 - Punjab Newsline</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 11:47</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQdUFDNXVpWkZxazNXVkI0TDdKTGFJNXBQbUE0X3dLTUswZ0lHR1ViWUlEWU1acjBHWkFoLWNzeF81NHVnaU9TSlVzNGJtX0VMaWhWeUpXMXNTRDJBX21nbGc5d3FBcWdEZTZtYURpZUE2RVpRY241eFFJdHZmSFdOOVZXaUxLbnpMTmliYXE3TU1uZ0tkRGpQRFdXX0JJS0hQVkVndlhQNlh3djZic0hSQThpWHRMODlkNXJhS1drcWJPVVlD?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Dabur India ESOP Allotment Nov 2026: What Investors Should Know - Kalkine India</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Fast Moving Consumer Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -549,8 +603,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">19</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 09:28</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxPcnFfVGxkMU90azRUbzVDeG9yUjV6UnZBcEtNSkNxRFdha0h2VUVwd19nZWRYdkRJWHlqVjVjQmFfZ0tlaVotT3d2WWJhQWo0N05PY2RuZk11RTBTWVhVeW1tejExX1NQZ1YwRDZBWWFZNEU2ZjhyQm93Y0I3eTdrdWZtbDJUTHNWOUNDTkRFUnU5eDk4YWVzdWZtNFVZbGttSVl4SUEwUUItNkRrekZNTkprY214QWVtVy1lOHlnb0YwTGdRTF9ObndWRUJSakpTemI3ZmxjUEtocnJkamJ5dS1TTy11MXhudW1GblZKWGZtNEpCelotNNIB_gFBVV95cUxOR2RZRjlldU9xWlcydkhzTDA2ZDhVdXRTQk8wWlFVc0wxRHpEOE11VWkteHd5QTlDeEZrNmdubGhYZU5yWnJ3OTdXVWRzdEF4dzZOZGtRZ1BCMUgxLXFRUHdDalk5ZTFNaTk1ZHhoYk5FdmFYQy1DNDdzbW1aaDJaemdsb2RmUzZFNTN3WEt0amdDbDNYNzBrZUsxX2dWSVVvb3lHOVhRLVF4X0o0Z1BzRG0xV25Dbnp2U2JQWE9OYWVlNFk5MUpnMF9IS2FNTlF5UUwwNUQyV3cyV0RLbmZmZkFCZFJNcV9jaVpQcmFQYW1GbUNUZkY3aGY2cTAtUQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Marico shares jump 6% as strong Q2 puts growth story in overdrive, sparks bullish calls - The Economic Times</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 23:16</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxNT0h0Tk1FOXZJamZtRHZ0WmFjZWRsdzh1d3k0WXRMTTB2SUxXMTNpOWJTVEJnWDJ4aTAzYXJxenNQV0RHSXljM3JKbWExTk9qMWtSWmdxUGM3UHZWN2dPMGZ3Y0htUklWYllLcElPV19IVFFtbjlUOUdVanFsVGNPdmtPRVpMcEdpR2JwNHhHck45eTctZ1Y5T3lrSkN5UjB3WXM2OXVjemtzMnRSY3lB?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Sensex Jumps 1,225 Points as Strong Corporate Earnings Fuel Rally in Indian Stocks - INDIA New England News</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Fast Moving Consumer Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -558,8 +612,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">20</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 09:00</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOUWp6b0VIZjJRaDFILUwzZ0RUYVBDRkVFTGVYUG9IUU85X1ZqLUcyRzE3YU84bllhY1V1V0RERW1RdE55b01wSmcza1hlVE9OOWpOdEl0S0lpSlYtNmk4M0Z2eTdSYzZSRVMyYnRpTXFGYlVYd2lvQ3lXWG1kbUtKUkFWNVRvcE9NYmVVRm9SSnRkM1hOZHpIRFBNdjlNME1XekREOVI1cms3ZlNKNlVTMVEwNFVrUFpHdGFOcnExWjBHTWw4anpaZ2NOT0JMcWFJSWFDbA?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Indian companies trust AI with greater autonomy but struggle to prove financial returns: Report - www.indiagaz</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 14:00</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNQXpGaC1ZWnYwcVVubjFuMTJoRnVpYlR1TW1fZk5QUDZKeXZfTXhSdHJzaTB3SFhWa3d6VnUwcm5SRDZBNUtEWUJkbEpBbmUyX1A0LXZFSFpXb1NKZjRIV0llYzByZ25fLXpTRjNDR0twaDFfakJSdC04TEI0MjluUkR6SXhDUmlvaTRfV3ExUDVSX1lWRlVXTHBhWXdlZjJYZmk0TUt6ZzlkRnR0?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">5 Strong FMCG Stocks Near 52-week Lows - Equitymaster</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Fast Moving Consumer Goods</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -567,8 +621,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">21</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 07:42</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxOcjVZSWI5bDFUOFpsTUd3ZzFMZmJiU1p3R3E3NS1BLTB0ZkNBQ05KUXNVb2I4VElrMFRvMmFQNVdwaWs2RkpCOFpEblpIbV9TbnB5cW5UbGw4V0FfQU1qSFA4X2NpQVpPZFhITEIxZWxCaWxkenNJUGJfUGlHU0lwUDhIdFFWNkVKMU1HSm1KaFFXaVBKVDlLVnFkQVA1M2pyTGhVTjlLNGNJR0ZRZkFNcy1Fa3BBVkgtQUY0dnBmLXhqMk9kZUpULTAwQVkyeEx4QVBIbnFoaWk4UEtNR2xTZEpYbGVvOTVyM2J2b9IB8gFBVV95cUxNVzVuay1pVXl5ZzRVTUhmMnY0NHdFa21WYTZSMHF6YjEyZzVHbWEzamNfMk9tMHZjcHAxMHh1ejF0RXAxZTJzZDZmZmFRbG9UT0I1WTYwOVFaNk9VRE1vWUxDWUk0bUdteFdpVjIyNFJreERwV1JQWU5aMmd5dlpPY1R6V2ZkcWMzNFA2WUlkYXBwYU1mUVVUUlIwb2szOFE2d0RudkwtMWxVTGlncW5zUjFWbWpKaFdxS3ZXT0NaWnpfd01xLXloNkpOWXJfaXg0ZGxSVlR6Nnl5bUZ0Ukp0ZUwtYnp3ZFZ0TmF3UmppbjB3dw?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Mankind Pharma, Dr Lal: Shrikant Chouhan bullish on 2 healthcare stocks - Business Standard</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 06:54</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiyAJBVV95cUxQY1QxMnprRnRpVC1sZnZkZXJfRVhIbkVQRUVLalNURnBSV0VwRFloaGcxSUtac1M5NGVrUmt0ZWVkVHNqcjJoSzFvSEgtWlZzNHhNYlEzbFZYVjNUTE85RF91T1N2NG13cEhIdHFmeWtVT1VQcHJqYlN0T0tycWJlZUxwTWp2WklBYWY4bWZyYnRRaGR0UXRCMXN4UnlaRUhRWHROSWVpcmkxcnBDMDhsdzFLblJRSkI0dlNzNlJDZmp2TXVxbzRwWXJERVpzNkVzM3ZkLWRPZDA5N3p0WGVsSWFsRnhmMUdhcVU1ZHNWUU5vQXFKMmFlMFlHaU9LR3BENUJfUlZEQnAzcEpYeHBPek9USzlNSUpvTFFIMzRKTFZrZ19LazQyN0s2ZGp4Q1JOZk1QSDlzTDNmQ1lyYm9SaE04aDdnUGdW0gHOAkFVX3lxTE1yS3RfaFhCQkpPZ0dTRjVwZy0wZTkwNnMzUGE4UHFhUjVFb2lOZ08tMW5BUnMxTm9ENTB6Y3A3XzhOaGg0cVJNd0hpVXRGNENrNEVKMHdkcXdXZUU3enlUX0QzYnlJRUgzVWI4b0cyNDlEdVhXcGE2S3dtbWJJSlNDREtHZlktS0xldUd1SktRS2Uzcl81R3prZE9IQy1yYlBUa3BPQnhjY2dTbDlza1hzTTlDX0QyMllma1RZTWdwQ3FQMEViMXJkSHJUOWQyQl9QZVcxYTJHTHFDQXMtZ0VDSko2TWtTd3d1dTFNT0ZKbXM4dUFnUGlYWTdNMl9aWld0RmxQZjBsLTB6TWQ2bXFNVWJYRnBwMFhYT0Y1YjVQTV9XUXk0RHJRYkZrUUJfcWFoVVo1T2dzTXh3TC1FU1RqMGdnYWlKN3ZXNk1tMlE?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Stocks to Watch Today: Adani Power, Cupid, Aurobindo Pharma, BSE, Apollo Hospitals, Lenskart, Nykaa,... - Mone</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Healthcare</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -576,8 +630,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">22</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 09:25</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOb0s5Zm1qRkwtTHROMFlTWkVCSlZnNS1lSlJxazJrRnJQRG9MZFNKV0hXQkNuSUhWUk5zMHNYVmNBQ3JWSkx5S2lLWXVwS2RqaS1mSWJYbjhHRFJtZDE0cFdzMGxkcWhGSUFpODVsUXlkTzJFbFJXRFloV01XTWJSSmxIa2lDcFhJa3FDNUpWb3UwcHZ1cDN4em1ZdVRwMEZvTHc4Tg?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">EAAA INDIA ALTERNATIVES LTD. Stock/Share price , NSE/BSE Forecast News and Live Quotes - Equitymaster</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 09:29</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMihgJBVV95cUxNcWxaSEJNWlJXQjBHbHp3dXdVR0lFNDFmUUhhVmRXNVR5Z21ZX1RDODVjWUp1NzAzS0pkWUdjQjZMd3dxT092V1BhcTdoSkd1SVVIbzMxSlhJNmlZMC1nRnZYZ0dMRzdzR0N6MUNTUXRzdGhnVWRQT05kR29JYmJJbG5YS21qcnVVRTN5MGhDR0hZcjhKRWdldXBLc2xQYk83SThoUlVQeU53YW5feWo2UzhWSTFnMUpHZ1RHbFFLTjFNZVpnMnZQN0JidWRDLWQtbWlCOTBuRUNRUjZFOFo3NndXVDdsOWtFaVloNFlEUl9EWHoxT0J5cThPQWt3Y0F0Nml3aE5B?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">SENSEX rallies over 1,600 pts; NIFTY50 jumps 1.8% as crude oil plummets; key factors behind today's stock mark</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Healthcare</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -585,8 +639,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">23</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 11:32</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi-wFBVV95cUxPZEJpTXhrLXNMTXBFM3pTY0FYLTlXWnB4SHNmRlFYc2xxbXNBTTZORFhud1RTdHFIVUVGNHcxUW83TC1UTGM5eEpzWklYMG5LalVCZVN3bVZQRThncHdOWDF0NWZnZy1SWWFaOWlwcENaVEIzMW53R3VkOUlIbWxlM3dLaWJ5QkUtb0VIOXBJbFZXMGh4alFTRGtCTTFJTW1RWlAzSUduUDVjSG14aFNIQ0JvTXk3X1FkeWtaM3U1NFc1M3B3SWRIODZ6OWl0UTd1QTBrcTdkeVdMN0V4OXQ5cTVMZ0xPcXpjNVE5ZXVQNjRKT2tRSDJ2b0gwONIBgwJBVV95cUxOcmhIUzBCU25XZjAxeTVFaEZKbGNQUGNXUzZkUWdEdzdLMUNhdHpxbThVTjhONDd2clowRWxMZnhXckg2Y1hLaVpqa0N3b1FKZU1weEZ1d0VnVzJ6RlpzXzlmeDZhOVUxOXBWb19aZHN6WC1IVnR0RC15aFVHZWpiRVZXMkdEOTIzSUtGVC12VnhVcjROMUI2TGZyb2lIYUVaWVJ1SlM1cUpnUm9DOG04cy1zQVNvZ0RUZnFyTG5OU0R2SGhuUmNUNl96QXNpNzRLakxpMEEtempuRnI4a0czMnhJWnNBNHZNSUJIcVN1ZHBIeC11R1hCeWRDZzRGSmFHeUJZ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Stock Market Today: Sensex Jumps 830 Points, Nifty 50 Atop 23,650; Balrampur Chini Rallies 11%, KEC Plunges 9%</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 08:08</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxOV2cxT1hiaEpBTWVNX0dmWVJtbWZuQmxZR3g0aWFGdHhpVTIyTDlNLXhtQ0tod2hVT19IREN1V2dJS01nb2gwM1d4bzE3M3pQdzNuNHRDQ1FzTF9icVRfYXEtSmc3dndLaU12VXBOWHFwYmMzcGl6Q2dZVFZERGU5OWRGSFVNcXRjNVFnLWN2amtmU1M4ZEI4WFF1WTdoRTI4S2htTXB5WjIxODRtTEhXeW5OVEdQSHp3NTlpMmo5ZzRtdGFGZFl1ZWN6UWZNUdIB0wFBVV95cUxQUHpiV3RJTkpFdk80MG1OMWtJNHlpNjlYMUQtTWpUaHdzZ0VJbmZMTXNoME5hRjJmMzd6eENVejE5bUxVQXEyYks5RGN5eURXRzNHa0ViS3RXVGJMY2JQZTNiUThrdzFYUUdkemlocmowdzhkb2MyVGU4aXpHUEVfN0d4Vm9jdndtZVM5Y2phTWQwVzQ4VXF4NThXenIwV1dXUGZiNTVhc0hLM3liMWpJcllsMi1jRTZKT0U1eE9HbWhBQkprYXF2MGo4bTRlT3BnMU13?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Stocks to watch: NSE, Bata India, Hindustan Zinc, Nykaa, ASK Automotive - Business Standard</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Healthcare</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -594,8 +648,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">24</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 08:33</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMingJBVV95cUxPaEZZWXFHSWc4RU9TNjdONnJqREQyQndNREdNbU1BcFYzZl81M2ctYWFOa2FNTjQ2VjZaV2g0RjIzX0Y5djFmQmo0dzYzMVZZb1o4OTZEOW1FMmNKOVo0bDJwSWxVdU4wb2R5eXFnNmgzZ1lPWVRpM2xSazVFY2pLTXRlX2RKa2lBRmhVbFZ2SGY2MnprMS1iWDNNZUM5Z1BKUHRoazNHUjdsQUpIWmpsM2JvWFRzT1RQbHZrUldjSjRtMTNPaVp2Qnk5WDhFc3JhbWpKTk5CMVc0YU9hNG4zd2VxR3pCeVYzSF9BaG53b1RSWC1VUTA4ejhvdmpKVnhmSHlycElIWWV6MDBqNW5HNDVwQ3NSRmtST1VMbGNB?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Q2 results, Nov 3: SBI, NSE, Bajaj Finserv, Solar Industries, Lupin, MCX, Graphite India, Gujarat Fluorochemic</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 13:50</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE5OLTU5d3pYbE8yaHBvbmhIMGFLamNlb19yalNpNTJVWTF0MGRkeEo1SGZiSElKRUhobDFnc3BKT3o0T1FqeGF0cV9tMVlucUJKSXo0N3kwVmJxZWNLSGpTMA?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Under Rs 900 Stocks to Buy in Nov 2026: Top 5 Picks - Univest</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Healthcare</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -603,8 +657,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">25</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">01/11/2026 18:26</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi4gFBVV95cUxPNW5FcWNUYmtSVWFuaEx1cVBHOWVEcEJiY3EtVlJUcVpmQXhRbVgwOWJiS2NBNUppc054UDJ0NEk1VmV4WEJtMTFrUzlOdUdrWk5zX21DRWRkUExrODdUajY2ZFpuR19xTXRpdkpYV3JMS0tRUFk2VGlYamFuUHdXcHVRc2liS3NmQVRERC1GT0I0WHVIZ0ZZZHVidDBjRFJhanJJcjJ0blp5MmdfcjFwSmZWQXBBeHBQN2N3T3BnaTBGbEhpNmFRQk1pNHgwNUNlckwxUm9xQnZmb3A2OWdYU21R0gHnAUFVX3lxTE9XXzVhekpEbVZuMTg1aFlWbEZRRXJ2NzF0RE13Z2VWbWNlT2trbVhPeU5iMEpob0pqbmt5b2pZeTU3SnVBV3h4djNUNEV6NFZZNzRMdFBOSlZxQ01WcEpSaWxYZ1pLUmJkVEhIcFI5VmF2bEZPc29nTGdDZ0dlN0o3RUphejA2aG5TLUtPZHp2Slh0VXlicnR5cllxRmxpVEszakdEQVR5SHo0blNoWlppVUMtNUZyd0x2QjFuWjBfRzJSSnhNMVNTSDBmMkdDazd1M3Uwb2d5VGY5WV9nbGRUQWcyOTZyNA?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Q2 Results This Week: ITC, Bharti Airtel, NSE, BSE, LIC, among 350 companies report numbers - CNBC TV18</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 07:00</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiwgJBVV95cUxPOTI3VEQ4RUd2cjZIN0lEYXVwclFuNDZzRFVDS2NxR3Baek9OQnVHMmNQSkVHandlOGp1c3BiZE9HSVkydGVYYlRsbzFuSjBwcW0xN1FiWXVoWTVKWDU0bWxQUFowc1haQTIyb0k5blVONmdRdnVxMnlwNVBNa1FMQ2FCd0FrdE9wQmFId2ZvMk90d29iM0NUREhZN3pzME9wRzVPT0hUVlFTWDNpLWNHOUJRS1hZN1VTN2JSMkJudkQ0SVJNOWlEMUl1N1MyTzRNRmxyYVo3VDV1ZDFjYjExRFFiMEZEWGF5Y1E0Q0duenZ0WHNrNTZwX1FzREJ0a3o2Y3ptbVpGR0NKZGVCMWNhLTBqOWNKc2RKZlhPbGw0NGlDZFhoZUpzS1NnT0xLTkZVbnZxdmhGSFJub2pfalM2NHhR0gHHAkFVX3lxTFBhS3FPVDloTE1NdVJTTXlpT2dQTjhJOGxQbGRMRnRQSGUxTThDSlllTzloemdwLUxRWmZIQ3AtUUNReFJZaWFRMVp1S05fdmFkNG9qYmtmemRpUFNNRjdXMVIxQWV0a2c2UXdsQUlBYmF0UklNdmxjczBYTUV2X3lPTHhjN1FmQzRNVnFOUmhBRFVfSTJmUzg1TnR3dTQzb2tuSTQ0RXN6SUlXazRNMUE2YTJ3RmttZlJCNkVSXy14eTVXcnZ0Z0RKSG93cFRZeHRQQVU2UFNVRkR1SVpNRm9BU0N0M2l6XzdNSGVIVmFHbUFBbkh2SE1ScDdOai1IWXBQbVZQRGs4ZjhaWlQ2cnEyUVZLNWQxNXpxYjVQTU1nb1VrQUFlRzR4MjdjQS1VTmlhb2x1cDFWa1ZnakJhT2lZSDJaSTdSRQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Stocks to Watch Today: NSE, Lupin, Metropolis, MK Jewels, Lloyds Metals, MCX India, Awfis Space, Aarti... - Mo</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Healthcare</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">6 holdings</td>
@@ -612,8 +666,8 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">26</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">02/11/2026 16:05</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE1GeGppQlVqQ3JxaWlIZ18tSW5lU1FyRFJlOUhDQ2dXWjlUTjFFVnNCMDkwVl9zYm1ZLVNDWW8xTHc3dTlRVU1EdUUxTlllUElHclg0bmd5bEsyVlREcURTbzQ3VVU4SHhLVnFkNkhYOWxVXzFyUjBFTmZ6TQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Record Q2 earnings send Reliance shares up 7% - The Avenue Mail</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">05/11/2026 14:33</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxQU1habWJJNDctcFJJYWRCclJXWW00R0RmdlVQNEU5T1RSTHA4WVJKclJJMmpFLVRnZDU2X2VzM3o0OVpKRVdRWDJfaW5kWE9veEpQaXhSbVpzblJkX1JVSEdsXy1KRldsZFZGOWIxVEJjTHY3NU5OS0tHTmZfcTJnQ1F6R0lSZmpqcnVab2p3WTJjZ0NtTEVuMnZHcEwzNXJvR3JIMzZYU2VRWUU4aVJkWmRKN2I4YWFTNTdOd25XS3hRbnYtaWc?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Thirumalai Chemicals TIRUMALCHM Q2 FY27 Results Board Meeting - Kalkine India</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Chemicals</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">5 holdings</td>
@@ -621,8 +675,35 @@
             </tr>
             <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">27</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 07:44</td>
-              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxQT2RnU3ZHWWw1aWtTWWowTThCLWlQeFJ4WFBSYUlNV2ludU5jOERUNHZ0R1BFazQtUklYek9teWxiTHl6MGJFWVItYlBkSTZ1S1o2azFJNzJ0Y2U1a2dtQ0lVdTNtYURXeEwzZmc1dnpEaEtXZDlYbTg5bkh2M3RvSm85NjQ3X1JxRWIyUzFGYWRzcUVEY0lCVC1kODhIazJjRnV5eTRQZzRGVnRabHBFWVVqYkdnT2fSAbwBQVVfeXFMT0ZYQmpDWUVlc3pPcWtEWEdrcHRRNUluckE1ZmVwUUxjd2hibmtXWUhZZXJ1a0xEYXNVQlBnbThrTkl2RU9yS2NSRDB6ZXBqb0NCRlZNbXNua2ZXaFdBTkRRUnBhcmRnYlhqWTBjTmtGajVuRnBJMnhTdTk4OTgyOGV2NDU0WkJPVjRZR01VelI4X3UyY2E1OU04S1lWSHMxNEZMX2VBMTNlbXF5RmVTYjdJZUpLQXlrUzdkcnM?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Q2 Results Today, November 3: SBI, Bajaj Finserv, Lupin, MCX to announce earnings; NSE's first since listing -</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 06:00</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxQalJFcEs0dHpudWc2WnBuenZmR2VidXUtdzMteXl2dDlxN1dzX3NhTDdHY1BhUFFWdXVrUFpMRHowakpwZWpGM01ONXZ6Y1pJUnkxTzVHTWx2TEhwUVZjejdNRXJMa1R0RFQ4NXFKSzdGRkN4bk1oYlNMTHdWZEVodkNDSnhwbkpWdUtxV045d1RvTE1FS2hvbnlHRlM3Sk1rYzdzT0UtTlUzYXBWRVpTYjBnN3pmdC03MV9XdGVRa0NaWkZBZ1ptOEY4QXFGTFRHRHFheNIB2gFBVV95cUxQdFF2ZjYwdnZjbHFNdFZpYkJFTktOcEpqTlRjSk9YLUtFZ3M2QTRyc2IwWjJEd0QwLXotdmNpZFJ4ajhzNXIzOFcwam9TWG1PX0lodTQycXotbjBsMUJid2Utc1lEUWdBc280TkZ6MGtCa05xSTJod1QxVDFtYUo2enRDbk10aTB0dXgyVElGUHRxNzNxRVN6S2p2c3RDZnM5bkhQTVlJWVAwbFE4TkNETUdjYzJ3YXRfNERaTjNNbV9KNkMtOVFqNFJnVmxkeW16a3RSTGZrLWdnQQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Stocks in news: NSE, BSE, SBI, Happiest Minds, MCX, IEX and Minda Corp - The Economic Times</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Chemicals</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">5 holdings</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;">LOW</span></td>
+            </tr>
+            <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">28</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 18:19</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMi-gFBVV95cUxQU2NDbmZfMFdMLUpNeWVLa1BXRDhjeXFNMUNZQ0pkMHdzdV9reVFNXzI5S2dGbUs0Q21GTUI1dmNvd3dESi00U1lHNHcwaEhPYm0yYXgtNXB2SjV4YTh6dzREZC15UUotWmk2b0o0Ul84NnlmMGJfWjVGeThHTElXZ1pxck1qMHF6UVZkNGJ1WDluLUw3MWt2dEJWR2x6ZE5QS2FzSlBlbFhmQjRkR2tIR0lmV1I3MjVubDdxN2JZTWstUmVWNmNRd0pfdkx6RXNnTl9PUm5qeVlyMmFSb25MbHJDcy1Rc1hyb3FTZE9RTlhGRFJkTmxPdldB?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">NSE Q2 FY27 results: Net profit jumps 23% YoY; firm disinvests stake in National Coal Exchange of India - Upst</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Chemicals</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">5 holdings</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;">LOW</span></td>
+            </tr>
+            <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#FFFFFF">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">29</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">03/11/2026 19:26</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPcndDMVlQdlFTV1NZZjU1cW9vX3dMa2xFSUU2bHlDWDZfU3VWZ2ZRdnB0aVNoV3A1S1RIdGhEVmNSRG5EUjUxYkV0a2p2aTJ1Umtqa3BWX0hlbElITEtZODdnYWl4a1Jsa20yVDZmNWZNRlJnZlFMVW52dkVCSjlPNVhKZGVGdnNOU2hib3ljTjRoenI0dGZzeVdJZW42MkQtbXJYQlNXRnVheTg4QW5UMENldXQ2UTlvZGtZd01VY3VIRTlfXzFN?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Shree Pushkar Chemicals (NSE:SHREEPUSHK): What Did the Q2 FY2027 Earnings Call Cover? - Kalkine India</a></td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Chemicals</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">5 holdings</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;"><span style="background:#E7F1FF;color:#0D6EFD;border:1px solid #0D6EFD;padding:2px 8px;border-radius:12px;font-size:11px;font-weight:700;">LOW</span></td>
+            </tr>
+            <tr class="news-row" data-impact="LOW" data-category="Sector News" style="background:#F9F9F9">
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;color:#888;">30</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;white-space:nowrap;">04/11/2026 07:00</td>
+              <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:12px;"><a href="https://news.google.com/rss/articles/CBMiwgJBVV95cUxPOTI3VEQ4RUd2cjZIN0lEYXVwclFuNDZzRFVDS2NxR3Baek9OQnVHMmNQSkVHandlOGp1c3BiZE9HSVkydGVYYlRsbzFuSjBwcW0xN1FiWXVoWTVKWDU0bWxQUFowc1haQTIyb0k5blVONmdRdnVxMnlwNVBNa1FMQ2FCd0FrdE9wQmFId2ZvMk90d29iM0NUREhZN3pzME9wRzVPT0hUVlFTWDNpLWNHOUJRS1hZN1VTN2JSMkJudkQ0SVJNOWlEMUl1N1MyTzRNRmxyYVo3VDV1ZDFjYjExRFFiMEZEWGF5Y1E0Q0duenZ0WHNrNTZwX1FzREJ0a3o2Y3ptbVpGR0NKZGVCMWNhLTBqOWNKc2RKZlhPbGw0NGlDZFhoZUpzS1NnT0xLTkZVbnZxdmhGSFJub2pfalM2NHhR0gHHAkFVX3lxTFBhS3FPVDloTE1NdVJTTXlpT2dQTjhJOGxQbGRMRnRQSGUxTThDSlllTzloemdwLUxRWmZIQ3AtUUNReFJZaWFRMVp1S05fdmFkNG9qYmtmemRpUFNNRjdXMVIxQWV0a2c2UXdsQUlBYmF0UklNdmxjczBYTUV2X3lPTHhjN1FmQzRNVnFOUmhBRFVfSTJmUzg1TnR3dTQzb2tuSTQ0RXN6SUlXazRNMUE2YTJ3RmttZlJCNkVSXy14eTVXcnZ0Z0RKSG93cFRZeHRQQVU2UFNVRkR1SVpNRm9BU0N0M2l6XzdNSGVIVmFHbUFBbkh2SE1ScDdOai1IWXBQbVZQRGs4ZjhaWlQ2cnEyUVZLNWQxNXpxYjVQTU1nb1VrQUFlRzR4MjdjQS1VTmlhb2x1cDFWa1ZnakJhT2lZSDJaSTdSRQ?oc=5" target="_blank" rel="noopener" style="color:#1F3864;text-decoration:none;">Stocks to Watch Today: NSE, Lupin, Metropolis, MK Jewels, Lloyds Metals, MCX India, Awfis Space, Aarti... - Mo</a></td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">Sector News</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#444;">Chemicals</td>
               <td style="padding:9px 12px;border-bottom:1px solid #eee;font-size:11px;color:#555;">5 holdings</td>
